@@ -1,15 +1,14 @@
 import React from "react";
 import qr from '../immagini/qrpng.png';
-import camera from "../immagini/Camera.png";
-import image from "../immagini/Image.png";
 import avanti from "../immagini/avanti.png";
+import image from "../immagini/Image.png";
 import {Link} from 'react-router-dom';
 import './Pages.css';
 
 
 import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
 
-function Page2() {
+function Page4() {
     return (
         <div>
             <div>
@@ -22,36 +21,31 @@ function Page2() {
             <div className="panel">
                 <div className="guideframe">
                     <div className="guide">
-                        Carica il tuo greenpass
+                        Aggiungi un logo <small>(opzionale)</small>
                     </div>
                 </div>
                 <div className="loadOptions">
-                    <div className="loadsx">
+                    <div className="loadlogo">
                         <div>
-                            <img src={camera} className="icon" />
-                        </div>
-                        <div className="loadLabel">
-                            Fotocamera
-                        </div>
-                    </div>
-                    <div className="loaddx">
-                        <div>
-                            <img src={image} className="icon" />
+                            <img src={image} className="logo" />
                         </div>
                         <div className="loadLabel">
                             Galleria
                         </div>
                     </div>
+                    <div className="rimuovilogo">
+                        Rimuovi
+                    </div>
                 </div>
                 <footer>
-                <div className="pagineOptions">
-                    <Link to="/page3">
+                <div className="pagine2Options">
+                    <Link to="/page5">
                         <div className="buttonAvanti">
-                        <img src={avanti} className="avanti" />
+                            <img src={avanti} className="avanti" />
                         </div>
                     </Link>
                     
-                    <Link to ="/page1">
+                    <Link to ="/page3">
                         <div className="buttonIndietro">
                             <img src={avanti} className="indietro" />
                         </div>
@@ -63,4 +57,4 @@ function Page2() {
     )
   }
   
-export default Page2;
+export default Page4;
