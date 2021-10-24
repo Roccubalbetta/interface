@@ -1,16 +1,16 @@
 import React from "react";
 import qr from '../immagini/qrpng.png';
-import camera from "../immagini/Camera.png";
+import share from '../immagini/Share.png';
 import image from "../immagini/Image.png";
 import avanti from "../immagini/avanti.png";
-import fasi from "../immagini/Group 5.png";
+import fasi from "../immagini/Group 9.png";
 import {Link} from 'react-router-dom';
 import './Pages.css';
 
 
 import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
 
-function Page2() {
+function Page6() {
     return (
         <div>
             <div className="fase">
@@ -24,16 +24,16 @@ function Page2() {
             <div className="panel">
                 <div className="guideframe">
                     <div className="guide">
-                        Carica il tuo greenpass
+                        Scarica la tua opera
                     </div>
                 </div>
                 <div className="loadOptions">
                     <div className="loadsx">
                         <div>
-                            <img src={camera} className="icon" />
+                            <img src={share} className="icon" />
                         </div>
                         <div className="loadLabel">
-                            Fotocamera
+                            Condividila
                         </div>
                     </div>
                     <div className="loaddx">
@@ -41,13 +41,16 @@ function Page2() {
                             <img src={image} className="icon" />
                         </div>
                         <div className="loadLabel">
-                            Galleria
+                            Salva in Galleria
                         </div>
                     </div>
                 </div>
+                <div className="consiglio">
+                    Inviatela su whatsapp (così non la perdi)
+                </div>
                 <footer>
                 <div className="pagineOptions">
-                    <Link to="/page3">
+                    <Link to="/page7">
                         <div className="buttonAvanti">
                         <img src={avanti} className="avanti" />
                         </div>
@@ -65,4 +68,4 @@ function Page2() {
     )
   }
   
-export default Page2;
+export default Page6;

@@ -2,6 +2,7 @@ import React from "react";
 import qr from '../immagini/qrpng.png';
 import avanti from "../immagini/avanti.png";
 import {Link} from 'react-router-dom';
+import fasi from "../immagini/Group 6.png";
 import './Pages.css';
 
 
@@ -10,7 +11,8 @@ import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
 function Page3() {
     return (
         <div>
-            <div>
+             <div className="fase">
+            <img src={fasi}  />
             </div>
             <div className="qrframe">
                 <div className="frame">

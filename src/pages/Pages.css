@@ -1,4 +1,26 @@
+.fase{
+  position: absolute;
+  top: -37px;
+  width: auto;
+  height: auto;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  padding: 80px 50px 25px 60px;
+}
 
+.tendina{
+  position: absolute;
+  width: 190px;
+  height: 40px;
+  left: 30px;
+  top: 335px;
+
+  border: 2px solid #457B9D;
+  box-sizing: border-box;
+  border-radius: 7px;
+}
 
 .title {
 
@@ -419,11 +441,11 @@
 
 .loadLabel {
   position: absolute;
-  width: 96px;
+  width: 130px;
   height: 26px;
   left: 0;
   right: 0;
-  bottom: 10px;
+  bottom: 7px;
   margin-left: auto;
   margin-right: auto;
 
@@ -458,7 +480,7 @@
   height: 130px;
   left: 0;
   right: 0;
-  top: 230px;
+  top: 240px;
   margin-left: auto;
   margin-right: auto;
   
@@ -919,7 +941,265 @@ color: #1D3557;
   color: #1D3557;
 }
 
+.colorescritta1{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: -15px;
+  top: 350px;
+  border-radius: 50%;
 
+  float: left;
+
+  background: #000000;
+}
+
+.colorescritta2{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 15px;
+  top: 350px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #ff0303;
+}
+
+.colorescritta3{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 45px;
+  top: 350px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.colorescritta4{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 75px;
+  top: 350px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.colorescritta5{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 106px;
+  top: 350px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.colorescritta6{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: -240px;
+  top: 415px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.colorescritta7{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: -210px;
+  top: 415px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.colorescritta8{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 180px;
+  top: 370px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.colorescritta9{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 210px;
+  top: 370px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.colorescritta10{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 240px;
+  top: 370px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.pagine5Options{
+
+  position: relative;
+  width: 395px;
+  height: 130px;
+  left: 0;
+  right: 0;
+  top: 450px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.consiglio{
+  position: absolute;
+  width: 150px;
+  height: 36px;
+  left: 160px;
+  top: 270px;
+
+  font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+
+  color: #1D3557;
+
+  transform: rotate(-14.31deg)
+}
+
+.conlusione{
+  position: absolute;
+  width: 268px;
+  height: 299px;
+  left: 65px;
+  top: 506px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #1D3557;
+}
+
+.textFrame{
+  position: relative;
+  width: 280px;
+  height: 80px;
+
+  text-align: center;
+  padding: 0 55px 0 65px;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  top: 10px;
+
+}
+
+.subConc{
+  position: static;
+    width: 268px;
+    height: auto;
+    margin: 10pxpx 48px 10px 48px;
+    padding: 7px 0 8px 0;
+    top: 106px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+
+    color: #1D3557;
+}
+
+.testoConc{
+  position: static;
+  width: 268px;
+  height: auto;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+
+  color: #1D3557;
+}
+
+.caffeButtonConc {
+  position: relative;
+  width: 231px;
+  height: 52px;
+  top: 135px;
+  left: 0;
+  right: 0;
+  margin: 50px auto 0 auto;
+
+  background: #A8DADC;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 26px;
+}
+
+.backHomeConc {
+
+  position: absolute;
+  width: 130px;
+  height: 26px;
+  left: 0;
+  right: 0;
+  top: 405px;
+  margin: 30px auto 0 auto;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-decoration-line: underline;
+
+  color: #1D3557;
+}
 
 
 
