@@ -1,4 +1,28 @@
+.fase{
+  position: absolute;
+  top: -37px;
+  width: auto;
+  height: auto;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  padding: 80px 50px 25px 60px;
+  text-align: center;
+}
 
+.tendina{
+  
+  position: absolute;
+  width: 190px;
+  height: 40px;
+  left: 30px;
+  top: 335px;
+
+  border: 2px solid #457B9D;
+  box-sizing: border-box;
+  border-radius: 7px;
+}
 
 .title {
 
@@ -48,7 +72,7 @@
   right: 0; 
   margin-left: auto; 
   margin-right: auto;
-  top: 290px;
+  top: 500px;
 
 }
 
@@ -159,52 +183,6 @@
 
   }
 
-  .sub4 {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 17px 48px 0 48px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-
-    color: #1D3557;
-
-  }
-
-  .sub5 {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 17px 48px 0 48px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-
-    color: #1D3557;
-  }
-
-  .sub6 {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 17px 48px 0 48px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-
-    color: #1D3557;
-  }
-
   .caffe {
     position: absolute;
     width: 181px;
@@ -299,9 +277,7 @@
   
   position: relative;
   width: 100%;
-  min-width: none;
-  height: 420px;
-  min-height: 50%;
+  height: 450px;
   left: 0;
   right: 0;
   top: 330px;
@@ -314,6 +290,7 @@
   border-radius: 30px 30px 0 0;
   
 }
+
 
 .qr {
   position: absolute;
@@ -420,11 +397,11 @@
 
 .loadLabel {
   position: absolute;
-  width: 96px;
+  width: 130px;
   height: 26px;
   left: 0;
   right: 0;
-  bottom: 10px;
+  bottom: 7px;
   margin-left: auto;
   margin-right: auto;
 
@@ -441,14 +418,28 @@
 
 .pagineOptions {
 
+  position: absolute;
+  width: 395px;
+  height: 130px;
+  left: 0;
+  right: 0;
+  top: 440px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.pagine2Options {
+
   position: relative;
   width: 395px;
   height: 130px;
   left: 0;
   right: 0;
-  top: 80px;
+  top: 240px;
   margin-left: auto;
   margin-right: auto;
+  
 
 }
 
@@ -509,5 +500,666 @@
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
+
+.colore {
+  position: relative;
+  width: 294px;
+  height: 36px;
+  padding: 0 30px 0 30px;
+  top: -10px;
+  margin: 0;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+
+  color: #1D3557;
+
+}
+
+.colore1{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 30px;
+  top: 0;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #000000;
+}
+
+.colore2{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 60px;
+  top: 0;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #ff0000;
+}
+
+.colore3{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 90px;
+  top: 0;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #0066ff;
+}
+
+.colore4{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 120px;
+  top: 0;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #ff00f2;
+}
+
+.colore5{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 150px;
+  top: 0;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #ffd000;
+}
+
+.colore6{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 30px;
+  top: 100px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #00ff62;
+}
+
+.colore7{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: -120px;
+  top: 65px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #00ccff;
+}
+
+.colore8{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: -90px;
+  top: 65px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #127456;
+}
+
+.colore9{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: -60px;
+  top: 65px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #333333;
+}
+
+.colore10{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 330px;
+  top: 21px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #6200ff;
+}
+
+.gradiente {
+  position: absolute;
+  width: 294px;
+  height: 36px;
+  padding: 0 30px 0 30px;
+  top: 175px;
+  margin: 0;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+
+  color: #1D3557;
+
+}
+
+.gradienteframe{
+  position: relative;
+  width: 280px;
+  height: 80px;
+
+  text-align: center;
+  padding: 0 50px 0 60px;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  top: 185px;
+}
+
+.gradiente1{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 30px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #000000;
+}
+
+.gradiente2{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 105px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #ff0404;
+}
+
+.gradiente3{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 180px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #2982bd;
+}
+
+.gradiente4{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 255px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #ff00ff;
+}
+
+.gradiente5{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 330px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #ffa600;
+}
+
+.gradiente6{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 30px;
+  top: 65px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #15ff00;
+}
+
+.gradiente7{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 105px;
+  top: 65px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #00a2ff;
+}
+
+.gradiente8{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 180px;
+  top: 65px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #033302;
+}
+
+.gradiente9{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 255px;
+  top: 65px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #383838;
+}
+
+.gradiente10{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 330px;
+  top: 65px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #3700ff;
+}
+
+.loadlogo {
+
+  position: relative;
+  width: 130px;
+  height: 130px;
+  left: 131px;
+  top: 10px;
+  border: 1.5px solid #457B9D;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.logo {
+  position: absolute;
+  width: 73px;
+  height: 73px;
+  left: 159px;
+  top: 12px;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rimuovilogo{
+  position: relative;
+  width: 130px;
+  height: 26px;
+  left: 131px;
+  top: 35px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-decoration-line: underline;
+
+color: #1D3557;
+}
+
+.text {
+  position: absolute;
+  width: 90%;
+  height: 57px;
+  left: 30px;
+  top: 215px;
+
+  border: 2px solid #457B9D;
+  box-sizing: border-box;
+  border-radius: 7px;
+  }
+
+.fontlabel {
+  
+  position: absolute;
+  width: 294px;
+  height: 36px;
+  padding: 0 30px 0 30px;
+  top: 295px;
+  margin: 0;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+
+  color: #1D3557;
+
+}
+
+.colorescritta{
+  position: absolute;
+  width: 294px;
+  height: 36px;
+  padding: 0 30px 0 30px;
+  top: 390px;
+  margin: 0;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+
+  color: #1D3557;
+}
+
+.colorescritta1{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: -15px;
+  top: 350px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #000000;
+}
+
+.colorescritta2{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 15px;
+  top: 350px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #ff0303;
+}
+
+.colorescritta3{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 45px;
+  top: 350px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.colorescritta4{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 75px;
+  top: 350px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.colorescritta5{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 106px;
+  top: 350px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.colorescritta6{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: -240px;
+  top: 415px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.colorescritta7{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: -210px;
+  top: 415px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.colorescritta8{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 180px;
+  top: 370px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.colorescritta9{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 210px;
+  top: 370px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.colorescritta10{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 240px;
+  top: 370px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #135ac5;
+}
+
+.pagine5Options{
+
+  position: relative;
+  width: 395px;
+  height: 130px;
+  left: 0;
+  right: 0;
+  top: 450px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.consiglio{
+  position: relative;
+  width: 150px;
+  height: 36px;
+  left:-65px;
+  right: 0;
+  top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+
+  color: #1D3557;
+
+  transform: rotate(-14.31deg)
+}
+
+.conlusione{
+  position: absolute;
+  width: 268px;
+  height: 299px;
+  left: 65px;
+  top: 506px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #1D3557;
+}
+
+.textFrame{
+  position: relative;
+  width: 280px;
+  height: 80px;
+
+  text-align: center;
+  padding: 0 55px 0 65px;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  top: 10px;
+
+}
+
+.subConc{
+  position: static;
+    width: 268px;
+    height: auto;
+    margin: 10pxpx 48px 10px 48px;
+    padding: 7px 0 8px 0;
+    top: 106px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+
+    color: #1D3557;
+}
+
+.testoConc{
+  position: static;
+  width: 268px;
+  height: auto;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+
+  color: #1D3557;
+}
+
+.caffeButtonConc {
+  position: relative;
+  width: 231px;
+  height: 52px;
+  top: 135px;
+  left: 0;
+  right: 0;
+  margin: 50px auto 0 auto;
+
+  background: #A8DADC;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 26px;
+}
+
+.backHomeConc {
+
+  position: absolute;
+  width: 130px;
+  height: 26px;
+  left: 0;
+  right: 0;
+  top: 405px;
+  margin: 30px auto 0 auto;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-decoration-line: underline;
+
+  color: #1D3557;
+}
+
+
 
   

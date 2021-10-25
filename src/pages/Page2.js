@@ -3,6 +3,7 @@ import qr from '../immagini/qrpng.png';
 import camera from "../immagini/Camera.png";
 import image from "../immagini/Image.png";
 import avanti from "../immagini/avanti.png";
+import fasi from "../immagini/Group 5.png";
 import {Link} from 'react-router-dom';
 import './Pages.css';
 import jsQR from "jsqr";
@@ -69,7 +70,8 @@ function Page2() {
 
     return (
         <div>
-            <div>
+            <div className="fase">
+            <img src={fasi}  />
             </div>
             <div className="qrframe">
                 <div className="frame">
@@ -108,10 +110,11 @@ function Page2() {
                 </div>
                 <footer>
                 <div className="pagineOptions">
-                    
+                    <Link to="/page3">
                         <div className="buttonAvanti">
                         <img src={avanti} className="avanti" />
                         </div>
+                    </Link>
                     
                     <Link to ="/page1">
                         <div className="buttonIndietro">
