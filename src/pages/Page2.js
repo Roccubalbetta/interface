@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 import qr from '../immagini/qrpng.png';
 import camera from "../immagini/Camera.png";
 import image from "../immagini/Image.png";
@@ -7,10 +7,14 @@ import {Link} from 'react-router-dom';
 import './Pages.css';
 import jsQR from "jsqr";
 import {get} from '@andreekeberg/imagedata'
+import Camera from 'react-html5-camera-photo';
+import 'react-html5-camera-photo/build/css/index.css';
 
 import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
 
 function Page2() {
+
+    const [cameraIsVisible, setCameraVisibility] = useState(false);
 
     const inputFile = useRef(null)
 
@@ -18,23 +22,49 @@ function Page2() {
         inputFile.current.click();
     }
 
-    function notifyQrCodeFound(){}
+    function notifyQrCodeFound(code){
+        console.log(code)
+    }
 
-    function notifyQrCodeNotFound(){}
+    function notifyQrCodeNotFound(){
+        console.log("non ho trovato nessun qr")
+    }
 
     function onImageInput(file){
         get(file, (error, imageData) => {
             if (error) {
                 console.log(error)
             } else {
-                let code = jsQR(imageData.data, imageData.width, imageData.height).data;
+                let code = jsQR(imageData.data, imageData.width, imageData.height);
                 if (code) {
-                    notifyQrCodeFound()
+                    notifyQrCodeFound(code.data)
                 } else {
                     notifyQrCodeNotFound()
                 }
             }
         })
+    }
+
+
+    function handleTakePhoto(dataUri) {
+        get(dataUri, (error, imageData) => {
+            if (error) {
+                console.log(error)
+            } else {
+                let code = jsQR(imageData.data, imageData.width, imageData.height);
+                if (code) {
+                    notifyQrCodeFound(code.data)
+                } else {
+                    notifyQrCodeNotFound()
+                }
+            }
+        })
+        setCameraVisibility(false)
+    }
+
+
+    function onCameraInputClick() {
+        setCameraVisibility(true)
     }
 
     return (
@@ -43,7 +73,7 @@ function Page2() {
             </div>
             <div className="qrframe">
                 <div className="frame">
-                    <img src={qr}  className="qr"/>
+                    <img src={qr}  className="qr" alt={"qr icon"}/>
                 </div>
             </div>
             <div className="panel">
@@ -53,7 +83,7 @@ function Page2() {
                     </div>
                 </div>
                 <div className="loadOptions">
-                    <div className="loadsx">
+                    <div className="loadsx" onClick={onCameraInputClick}>
                         <div>
                             <img src={camera} className="icon" alt={"camera icon"}/>
                         </div>
@@ -70,6 +100,11 @@ function Page2() {
                         </div>
                         <input type="file" ref={inputFile} accept="image/png, image/jpeg" onChange={ e => (onImageInput(e.target.files[0])) } style={{display: 'none'}}/>
                     </div>
+                </div>
+                <div>
+                    {cameraIsVisible && <Camera
+                        onTakePhotoAnimationDone = { (dataUri) => { handleTakePhoto(dataUri); } }
+                    />}
                 </div>
                 <footer>
                 <div className="pagineOptions">
