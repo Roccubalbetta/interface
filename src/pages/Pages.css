@@ -1,13 +1,22 @@
+:root {
+  --green: #F1FAEE;
+}
+
+body{
+  background-color: var(--green);
+}
+
 .fase{
+  
   position: absolute;
-  top: -37px;
-  width: auto;
+  top: 45px;
+  width: 267px;
   height: auto;
   left: 0; 
   right: 0; 
   margin-left: auto; 
   margin-right: auto;
-  padding: 80px 50px 25px 60px;
+  padding: 0 0 0 0;
   text-align: center;
 }
 
@@ -26,8 +35,8 @@
 
 .title {
 
-  position: static;
-  width: 294px;
+  position: absolute;
+  width: 280px;
   height: 200px;
 
   font-family: Roboto;
@@ -36,7 +45,9 @@
   font-size: 48px;
   line-height: 56px;
   text-align: left;
-  padding: 80px 50px 25px 60px;
+  top: 120px;
+  left: 50 px;
+  padding: 0 65px;
   margin: 0;
   
   color: #1D3557;
@@ -54,7 +65,8 @@
   font-size: 24px;
   line-height: 28px;
   text-align: left;
-  padding: 20px 50px 50px 60px;
+  top: 380px;
+  padding: 0 65px;
   margin: 0;
 
   color: #1D3557;
@@ -62,23 +74,25 @@
 
 .footer {
 
-  position: relative;
+  position: absolute;
   width: 280px;
-  height: 80px;
+  height: 127px;
 
   text-align: center;
-  padding: 0 50px 0 60px;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
+  padding-bottom: 80px;
+  padding: 0 65px;
+  padding-bottom: 95px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
   margin-right: auto;
-  top: 500px;
+  top: 635px;
 
 }
 
 .iniziaButton {
 
-  position: relative;
+  position: absolute;
   width: 121px;
   height: 52px;
   left: 0; 
@@ -90,6 +104,7 @@
   background: #A8DADC;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 26px;
+
       
 }
 
@@ -98,7 +113,7 @@
     position: absolute;
     width: 66px;
     height: 28px;
-    top: 10px;
+    top: 12px;
     left: 0;
     right: 0;
     margin-left: auto; 
@@ -118,12 +133,11 @@
   .tranqui {
     position: relative;
     width: 150px;
-    top: 30px;
+    top: 37px;
     left: 0;
     right: 0;
     margin-left: auto; 
     margin-right: auto;
-    padding-bottom: 50px;
     
     font-family: Roboto;
     font-style: italic;
@@ -131,6 +145,7 @@
     font-size: 13px;
     line-height: 15px;
     text-align: center;
+    top: 90px;
     
     color: #1D3557;
     
@@ -245,15 +260,15 @@
 
     position: relative;
     width: 280px;
-    height: 80px;
+    height: 207px;
   
     text-align: center;
-    padding: 0 50px 0 60px;
+    padding: 0 0 0 0;
     left: 0; 
     right: 0; 
     margin-left: auto; 
     margin-right: auto;
-    top: 120px;
+    top: 125px;
   
   }
 
@@ -275,15 +290,15 @@
 
 .panel {
   
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 450px;
   left: 0;
   right: 0;
-  top: 330px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
+  top: 420px;
 
   background: #F1FAEE;
   box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
@@ -293,6 +308,7 @@
 
 
 .qr {
+  
   position: absolute;
   width: 144px;
   height: 144px;
@@ -304,27 +320,13 @@
   opacity: 0.6;
 }
 
-.guideframe {
-
-  position: relative;
-  width: 280px;
-  height: 80px;
-
-  text-align: center;
-  padding: 0 50px 0 60px;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto;
-  top: 310px;
-
-}
-
 
 .guide {
+
   position: absolute;
-  width: auto;
+  width: 100%;
   height: auto;
+  top: 40px;
   left: 0;
   right: 0;
   bottom: 327px;
@@ -347,7 +349,7 @@
   position: absolute;
   width: 130px;
   height: 130px;
-  left: 48px;
+  left: 0;
 
   border: 1.5px solid #457B9D;
   box-sizing: border-box;
@@ -361,7 +363,7 @@
   position: absolute;
   width: 130px;
   height: 130px;
-  left: 218px;
+  right: 0;
 
   border: 1.5px solid #457B9D;
   box-sizing: border-box;
@@ -372,10 +374,10 @@
 
 .loadOptions {
 
-  position: relative;
-  width: 395px;
+  position: absolute;
+  top: 110px;
+  width: 295px;
   height: 130px;
-  top: 20px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -419,11 +421,11 @@
 .pagineOptions {
 
   position: absolute;
-  width: 395px;
+  width: 135px;
   height: 130px;
   left: 0;
   right: 0;
-  top: 440px;
+  bottom: 15px;
   margin-left: auto;
   margin-right: auto;
 
@@ -447,8 +449,7 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  left: 0;
-  right: 130px;
+  right: 0;
   bottom: 30px;
   margin-left: auto;
   background: #A8DADC;
@@ -463,8 +464,7 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  left: 130px;
-  right: 0;
+  left: 0;
   bottom: 30px;
   margin-right: auto;
   background: #A8DADC;

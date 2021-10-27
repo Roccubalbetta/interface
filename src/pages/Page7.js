@@ -1,13 +1,14 @@
 import React from "react";
-import qr from '../immagini/qrpng.png';
+import qr from '../immagini/qr.svg';
 import {Link} from 'react-router-dom';
-import fasi from "../immagini/Group 10.png";
+import fasi from "../immagini/Group 10.svg";
 import './Pages.css';
 
 
 import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
 
 function Page7() {
+
     return (
         <div>
             <div className="fase">

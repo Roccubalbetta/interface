@@ -1,9 +1,9 @@
 import React from "react";
-import qr from '../immagini/qrpng.png';
-import camera from "../immagini/Camera.png";
-import image from "../immagini/Image.png";
-import avanti from "../immagini/avanti.png";
-import fasi from "../immagini/Group 5.png";
+import qr from '../immagini/qr.svg';
+import camera from "../immagini/Camerasvg.svg";
+import image from "../immagini/Image.svg";
+import avanti from "../immagini/Avanti.svg";
+import fasi from "../immagini/Group 5.svg";
 import {Link} from 'react-router-dom';
 import './Pages.css';
 
@@ -11,8 +11,13 @@ import './Pages.css';
 import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
 
 function Page2() {
+
+    let root = document.documentElement;
+
+    root.style.setProperty('--green', "#FFFFFF");
+
     return (
-        <div>
+        <>
             <div className="fase">
             <img src={fasi}  />
             </div>
@@ -22,10 +27,8 @@ function Page2() {
                 </div>
             </div>
             <div className="panel">
-                <div className="guideframe">
-                    <div className="guide">
-                        Carica il tuo greenpass
-                    </div>
+                <div className="guide">
+                    Carica il tuo greenpass
                 </div>
                 <div className="loadOptions">
                     <div className="loadsx">
@@ -45,7 +48,6 @@ function Page2() {
                         </div>
                     </div>
                 </div>
-                <footer>
                 <div className="pagineOptions">
                     <Link to="/page3">
                         <div className="buttonAvanti">
@@ -59,9 +61,8 @@ function Page2() {
                         </div>
                     </Link>
                 </div>
-                </footer>
             </div>
-        </div>
+        </>
     )
   }
   

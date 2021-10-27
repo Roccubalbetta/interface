@@ -2,9 +2,11 @@ import React from "react";
 import {Link} from 'react-router-dom';
 
 function Legal() {
+  let root = document.documentElement;
+
+    root.style.setProperty('--green', "#F1FAEE");
     return (
     <React.Fragment>
-      <body className="body">
         <div>
           <div className="sub1">
             Non lavoriamo per i poteri forti
@@ -46,7 +48,6 @@ function Legal() {
           <div>
             <Link to='/page1'className="backHome">Torna alla home</Link>
           </div>
-      </body>
     </React.Fragment>
     )
   }

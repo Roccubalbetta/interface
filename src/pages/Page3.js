@@ -1,8 +1,8 @@
 import React from "react";
-import qr from '../immagini/qrpng.png';
-import avanti from "../immagini/avanti.png";
+import qr from '../immagini/qr.svg';
+import avanti from "../immagini/Avanti.svg";
 import {Link} from 'react-router-dom';
-import fasi from "../immagini/Group 6.png";
+import fasi from "../immagini/Group 6.svg";
 import './Pages.css';
 
 

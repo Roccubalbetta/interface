@@ -4,8 +4,12 @@ import './Pages.css';
 
 
 function Page1() {
+    let root = document.documentElement;
+
+    root.style.setProperty('--green', "#F1FAEE");
     return (
-        <div>
+
+        <>
             <div>
                 <h1 className="title">Rendi il tuo greenpass unico</h1>
             </div>
@@ -16,7 +20,7 @@ function Page1() {
                 <Link to="/page2">
                     <div className="iniziaButton">
                         <h2>
-                            <div className="inizia">inizia</div>
+                            <div className="inizia">Inizia</div>
                         </h2>
                     </div>
                 </Link>
@@ -24,7 +28,7 @@ function Page1() {
                     Gratis e sicuro: non ti fidi?<Link to='/legal' style={{ color: "#1D3557" }}>Tranquillizzati qui</Link>
                 </div>
             </div>
-        </div>
+        </>
     )
   }
   

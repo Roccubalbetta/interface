@@ -1,9 +1,9 @@
 import React from "react";
-import qr from '../immagini/qrpng.png';
-import share from '../immagini/Share.png';
-import image from "../immagini/Image.png";
-import avanti from "../immagini/avanti.png";
-import fasi from "../immagini/Group 9.png";
+import qr from '../immagini/qr.svg';
+import share from '../immagini/Share.svg';
+import image from "../immagini/Image.svg";
+import avanti from "../immagini/Avanti.svg";
+import fasi from "../immagini/Group 9.svg";
 import {Link} from 'react-router-dom';
 import './Pages.css';
 
@@ -11,6 +11,7 @@ import './Pages.css';
 import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
 
 function Page6() {
+
     return (
         <div>
             <div className="fase">
