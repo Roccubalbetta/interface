@@ -10,22 +10,31 @@ import './Pages.css';
 import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
 
 function Page4() {
+
+    let root = document.documentElement;
+
+    root.style.setProperty('--green', "#FFFFFF");
+    
     return (
-        <div>
+        <>
+
             <div className="fase">
             <img src={fasi}  />
             </div>
+
             <div className="qrframe">
                 <div className="frame">
                     <img src={qr}  className="qr"/>
                 </div>
             </div>
+
             <div className="panel">
                 <div className="guideframe">
                     <div className="guide">
                         Aggiungi un logo <small>(opzionale)</small>
                     </div>
                 </div>
+
                 <div className="loadOptions">
                     <div className="loadlogo">
                         <div>
@@ -40,7 +49,7 @@ function Page4() {
                     </div>
                 </div>
                 <footer>
-                <div className="pagine2Options">
+                <div className="pagineOptions">
                     <Link to="/page5">
                         <div className="buttonAvanti">
                             <img src={avanti} className="avanti" />
@@ -55,7 +64,7 @@ function Page4() {
                 </div>
                 </footer>
             </div>
-        </div>
+        </>
     )
   }
   

@@ -12,22 +12,29 @@ import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
 
 function Page6() {
 
+    let root = document.documentElement;
+
+    root.style.setProperty('--green', "#FFFFFF");
+    
     return (
-        <div>
+        <>
             <div className="fase">
             <img src={fasi}  />
             </div>
+
             <div className="qrframe">
                 <div className="frame">
                     <img src={qr}  className="qr"/>
                 </div>
             </div>
+
             <div className="panel">
                 <div className="guideframe">
                     <div className="guide">
                         Scarica la tua opera
                     </div>
                 </div>
+
                 <div className="loadOptions">
                     <div className="loadsx">
                         <div>
@@ -46,10 +53,11 @@ function Page6() {
                         </div>
                     </div>
                 </div>
+
                 <div className="consiglio">
                     Inviatela su whatsapp (così non la perdi)
                 </div>
-                <footer>
+
                 <div className="pagineOptions">
                     <Link to="/page7">
                         <div className="buttonAvanti">
@@ -63,9 +71,8 @@ function Page6() {
                         </div>
                     </Link>
                 </div>
-                </footer>
             </div>
-        </div>
+        </>
     )
   }
   

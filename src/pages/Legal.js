@@ -4,10 +4,10 @@ import {Link} from 'react-router-dom';
 function Legal() {
   let root = document.documentElement;
 
-    root.style.setProperty('--green', "#F1FAEE");
-    return (
-    <React.Fragment>
-        <div>
+  root.style.setProperty('--green', "#F1FAEE");
+  return (
+    <>
+        <div className="testolegale">
           <div className="sub1">
             Non lavoriamo per i poteri forti
           </div>
@@ -42,13 +42,14 @@ function Legal() {
             <p>Oppure se come noi non hai un soldo, puoi <strong>condividere il progetto</strong> a qualcun altr* (cosi magari il caffe lo offre ad entrambi)</p>
           </div>
         </div>
-          <div className="caffeButton">
-              <Link to='/page1'className="caffe">Offrici un caffè</Link>
-          </div>
-          <div>
-            <Link to='/page1'className="backHome">Torna alla home</Link>
-          </div>
-    </React.Fragment>
+      
+        <div className="caffeButton">
+            <Link to='/page1' className="caffe">Offrici un caffè</Link>
+        </div>
+        <div>
+          <Link to='/page1' className="backHome">Torna alla home</Link>
+        </div>
+    </>
     )
   }
   

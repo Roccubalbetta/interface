@@ -9,26 +9,34 @@ import './Pages.css';
 import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
 
 function Page5() {
+
+    let root = document.documentElement;
+
+    root.style.setProperty('--green', "#FFFFFF");
+
     return (
-        <div>
+        <>
            <div className="fase">
             <img src={fasi}  />
             </div>
+
             <div className="qrframe">
                 <div className="frame">
                     <img src={qr}  className="qr"/>
                 </div>
             </div>
-            <div className="panel">
+
+            <div className="panel5">
                 <div className="guideframe">
                     <div className="guide">
                         Un ultimo tocco
                     </div>
                 </div>
-                <div className="loadOptions">
+                <div className="colorframe">
                     <div className="colore">
                         Cornice
                     </div>
+                    <div className="colortable">
                     <div className="colore1"></div>
                     <div className="colore2"></div>
                     <div className="colore3"></div>
@@ -37,43 +45,47 @@ function Page5() {
                     <div className="colore6"></div>
                     <div className="colore7"></div>
                     <div className="colore8"></div>
-                    <div className="colore9"></div>
-                    <div className="colore10"></div>
-                    <div className="gradiente">
+                    </div>
+                </div>
+
+                <div className="scrittaframe">
+                    <div className="colore">
                         Scritta
                     </div>
-                    <div>
                         <textarea className="text" cols="30" rows="2"></textarea>
-                    </div>
-                    <div className="fontlabel">
+                </div>
+
+                <div className="fontframe">
+                    <div className="colore">
                         Font
                     </div>
                     <div>
-                    <select className="tendina">
-                        <option></option>
-                        <option value="SO">Sistemi Operativi</option>
-                        <option value="TW">Tecnologie Web</option>
-                        <option value="SM">Sistemi Multimediali</option>
-                    </select>
+                        <select className="tendina">
+                            <option></option>
+                            <option value="SO">Sistemi Operativi</option>
+                            <option value="TW">Tecnologie Web</option>
+                            <option value="SM">Sistemi Multimediali</option>
+                        </select>
                     </div>
-                    <div>
+                </div>
 
-                    </div>
-                    <div className="colorescritta">
+                <div className="coloreScrittaFrame">
+                    <div className="colore">
                         Colore scritta
                     </div>
-                    <div className="colorescritta1"></div>
-                    <div className="colorescritta2"></div>
-                    <div className="colorescritta3"></div>
-                    <div className="colorescritta4"></div>
-                    <div className="colorescritta5"></div>
-                    <div className="colorescritta6"></div>
-                    <div className="colorescritta7"></div>
-                    <div className="colorescritta8"></div>
-                    <div className="colorescritta9"></div>
-                    <div className="colorescritta10"></div>
+                    <div className="colortable">
+                        <div className="colore1"></div>
+                        <div className="colore2"></div>
+                        <div className="colore3"></div>
+                        <div className="colore4"></div>
+                        <div className="colore5"></div>
+                        <div className="colore6"></div>
+                        <div className="colore7"></div>
+                        <div className="colore8"></div>
+                        <div className="colore9"></div>
+                    </div>
                 </div>
-                <footer>
+
                 <div className="pagine5Options">
                     <Link to="/page6">
                         <div className="buttonAvanti">
@@ -87,9 +99,8 @@ function Page5() {
                         </div>
                     </Link>
                 </div>
-                </footer>
             </div>
-        </div>
+        </>
     )
   }
   

@@ -20,19 +20,6 @@ body{
   text-align: center;
 }
 
-.tendina{
-  
-  position: absolute;
-  width: 190px;
-  height: 40px;
-  left: 30px;
-  top: 335px;
-
-  border: 2px solid #457B9D;
-  box-sizing: border-box;
-  border-radius: 7px;
-}
-
 .title {
 
   position: absolute;
@@ -46,7 +33,6 @@ body{
   line-height: 56px;
   text-align: left;
   top: 120px;
-  left: 50 px;
   padding: 0 65px;
   margin: 0;
   
@@ -81,7 +67,7 @@ body{
   text-align: center;
   padding-bottom: 80px;
   padding: 0 65px;
-  padding-bottom: 95px;
+  padding-bottom: 100px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -151,11 +137,25 @@ body{
     
   } 
 
+  .testolegale{
+
+    position: absolute;
+    top: 100px;
+    width: 295px;
+    height: 1180px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 50px;
+
+  }
+
   .sub1 {
+
     position: static;
-    width: auto;
+    width: 290px;
     height: auto;
-    margin: 75px 48px 0 48px;
 
     font-family: Roboto;
     font-style: normal;
@@ -167,10 +167,10 @@ body{
   }
 
   .sub2 {
+
     position: static;
-    width: auto;
+    width: 290px;
     height: auto;
-    margin: 17px 48px 0 48px;
 
     font-family: Roboto;
     font-style: normal;
@@ -183,10 +183,10 @@ body{
   }
 
   .sub3 {
+
     position: static;
-    width: auto;
+    width: 290px;
     height: auto;
-    margin: 17px 48px 0 48px;
 
     font-family: Roboto;
     font-style: normal;
@@ -198,16 +198,54 @@ body{
 
   }
 
+  .caffeButton {
+
+  position: absolute;
+  width: 231px;
+  height: 52px;
+  top: 1300px;
+  left: 0;
+  right: 0;
+  margin: 50px auto 0 auto;
+
+  background: #A8DADC;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 26px;
+}
+
+.backHome {
+
+  position: absolute;
+  width: 130px;
+  height: 26px;
+  left: 0;
+  right: 0;
+  top: 1395px;
+  margin: 30px auto 0 auto;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-decoration-line: underline;
+  padding-bottom: 35px;
+
+  color: #1D3557;
+}
+
+
   .caffe {
+
     position: absolute;
     width: 181px;
     height: 28px;
+    top:  12px;
     left: 0;
     right: 0;
     margin-left: auto; 
     margin-right: auto;
-    padding-bottom: 120px;
-    padding-top: 10px;
 
 
     font-family: Roboto;
@@ -222,41 +260,7 @@ body{
 
   }
 
-  .caffeButton {
-    position: static;
-    width: 231px;
-    height: 52px;
-    top: 1000px;
-    left: 0;
-    right: 0;
-    margin: 50px auto 0 auto;
-
-    background: #A8DADC;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 26px;
-  }
-
-  .backHome {
-
-    position: absolute;
-    width: 130px;
-    height: 26px;
-    left: 0;
-    right: 0;
-    margin: 30px auto 0 auto;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    text-decoration-line: underline;
-
-    color: #1D3557;
-  }
-
-  .qrframe {
+.qrframe {
 
     position: relative;
     width: 280px;
@@ -270,7 +274,7 @@ body{
     margin-right: auto;
     top: 125px;
   
-  }
+}
 
 .frame {
 
@@ -306,6 +310,42 @@ body{
   
 }
 
+.panel3 {
+  
+  position: absolute;
+  width: 100%;
+  height: 605px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  top: 420px;
+
+  background: #F1FAEE;
+  box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 30px 30px 0 0;
+  
+}
+
+.panel5 {
+  
+  position: absolute;
+  width: 100%;
+  height: 820px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  top: 420px;
+
+  background: #F1FAEE;
+  box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 30px 30px 0 0;
+  
+}
+
 
 .qr {
   
@@ -325,7 +365,7 @@ body{
 
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 30px;
   top: 40px;
   left: 0;
   right: 0;
@@ -425,23 +465,22 @@ body{
   height: 130px;
   left: 0;
   right: 0;
-  bottom: 15px;
+  bottom: 0;
   margin-left: auto;
   margin-right: auto;
 
 }
 
-.pagine2Options {
+.pagine3Options {
 
-  position: relative;
-  width: 395px;
+  position: absolute;
+  width: 135px;
   height: 130px;
   left: 0;
   right: 0;
-  top: 240px;
+  top: 475px;
   margin-left: auto;
   margin-right: auto;
-  
 
 }
 
@@ -450,7 +489,7 @@ body{
   width: 50px;
   height: 50px;
   right: 0;
-  bottom: 30px;
+  bottom: 45px;
   margin-left: auto;
   background: #A8DADC;
   border: 1px solid #457B9D;
@@ -465,7 +504,7 @@ body{
   width: 50px;
   height: 50px;
   left: 0;
-  bottom: 30px;
+  bottom: 45px;
   margin-right: auto;
   background: #A8DADC;
   border: 1px solid #457B9D;
@@ -501,13 +540,22 @@ body{
   transform: scaleX(-1);
 }
 
+.colorframe{
+
+  position: absolute;
+  top: 100px;
+  width: 285px;
+  height: 170px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .colore {
-  position: relative;
-  width: 294px;
+  position: absolute;
+  width: auto;
   height: 36px;
-  padding: 0 30px 0 30px;
-  top: -10px;
-  margin: 0;
 
   font-family: Roboto;
   font-style: normal;
@@ -519,11 +567,24 @@ body{
 
 }
 
+.colortable{
+
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  height: 120px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
 .colore1{
-  position: relative;
+  position: absolute;
   width: 45px;
   height: 45px;
-  left: 30px;
+  left: 0;
   top: 0;
   border-radius: 50%;
 
@@ -533,10 +594,10 @@ body{
 }
 
 .colore2{
-  position: relative;
+  position: absolute;
   width: 45px;
   height: 45px;
-  left: 60px;
+  left: 80px;
   top: 0;
   border-radius: 50%;
 
@@ -546,10 +607,10 @@ body{
 }
 
 .colore3{
-  position: relative;
+  position: absolute;
   width: 45px;
   height: 45px;
-  left: 90px;
+  left: 160px;
   top: 0;
   border-radius: 50%;
 
@@ -559,10 +620,10 @@ body{
 }
 
 .colore4{
-  position: relative;
+  position: absolute;
   width: 45px;
   height: 45px;
-  left: 120px;
+  left: 240px;
   top: 0;
   border-radius: 50%;
 
@@ -572,24 +633,11 @@ body{
 }
 
 .colore5{
-  position: relative;
-  width: 45px;
-  height: 45px;
-  left: 150px;
-  top: 0;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #ffd000;
-}
-
-.colore6{
   position: absolute;
   width: 45px;
   height: 45px;
-  left: 30px;
-  top: 100px;
+  left: 0;
+  top: 70px;
   border-radius: 50%;
 
   float: left;
@@ -597,12 +645,12 @@ body{
   background: #00ff62;
 }
 
-.colore7{
-  position: relative;
+.colore6{
+  position: absolute;
   width: 45px;
   height: 45px;
-  left: -120px;
-  top: 65px;
+  left: 80px;
+  top: 70px;
   border-radius: 50%;
 
   float: left;
@@ -610,12 +658,12 @@ body{
   background: #00ccff;
 }
 
-.colore8{
+.colore7{
   position: relative;
   width: 45px;
   height: 45px;
-  left: -90px;
-  top: 65px;
+  left: 160px;
+  top: 70px;
   border-radius: 50%;
 
   float: left;
@@ -623,12 +671,12 @@ body{
   background: #127456;
 }
 
-.colore9{
-  position: relative;
+.colore8{
+  position: absolute;
   width: 45px;
   height: 45px;
-  left: -60px;
-  top: 65px;
+  left: 240px;
+  top: 70px;
   border-radius: 50%;
 
   float: left;
@@ -636,183 +684,28 @@ body{
   background: #333333;
 }
 
-.colore10{
-  position: relative;
-  width: 45px;
-  height: 45px;
-  left: 330px;
-  top: 21px;
-  border-radius: 50%;
+.gradientframe{
 
-  float: left;
-
-  background: #6200ff;
-}
-
-.gradiente {
   position: absolute;
-  width: 294px;
-  height: 36px;
-  padding: 0 30px 0 30px;
-  top: 175px;
-  margin: 0;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 26px;
-
-  color: #1D3557;
-
-}
-
-.gradienteframe{
-  position: relative;
-  width: 280px;
-  height: 80px;
-
-  text-align: center;
-  padding: 0 50px 0 60px;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
+  top: 305px;
+  width: 285px;
+  height: 170px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
   margin-right: auto;
-  top: 185px;
-}
 
-.gradiente1{
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  left: 30px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #000000;
-}
-
-.gradiente2{
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  left: 105px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #ff0404;
-}
-
-.gradiente3{
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  left: 180px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #2982bd;
-}
-
-.gradiente4{
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  left: 255px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #ff00ff;
-}
-
-.gradiente5{
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  left: 330px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #ffa600;
-}
-
-.gradiente6{
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  left: 30px;
-  top: 65px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #15ff00;
-}
-
-.gradiente7{
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  left: 105px;
-  top: 65px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #00a2ff;
-}
-
-.gradiente8{
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  left: 180px;
-  top: 65px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #033302;
-}
-
-.gradiente9{
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  left: 255px;
-  top: 65px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #383838;
-}
-
-.gradiente10{
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  left: 330px;
-  top: 65px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #3700ff;
 }
 
 .loadlogo {
 
-  position: relative;
+  position: absolute;
   width: 130px;
   height: 130px;
-  left: 131px;
-  top: 10px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   border: 1.5px solid #457B9D;
   box-sizing: border-box;
   border-radius: 20px;
@@ -832,11 +725,15 @@ body{
 }
 
 .rimuovilogo{
-  position: relative;
+
+  position: absolute;
   width: 130px;
   height: 26px;
-  left: 131px;
-  top: 35px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 150px;
 
   font-family: Roboto;
   font-style: normal;
@@ -849,204 +746,89 @@ body{
 color: #1D3557;
 }
 
+.scrittaframe{
+
+  position: absolute;
+  top: 300px;
+  width: 285px;
+  height: 110px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
 .text {
+
   position: absolute;
   width: 90%;
-  height: 57px;
-  left: 30px;
-  top: 215px;
+  height: 40px;
+  top: 35px;
 
   border: 2px solid #457B9D;
   box-sizing: border-box;
   border-radius: 7px;
   }
 
-.fontlabel {
+.fontframe{
+
+  position: absolute;
+  top: 396px;
+  width: 285px;
+  height: 170px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.tendina{
   
   position: absolute;
-  width: 294px;
-  height: 36px;
-  padding: 0 30px 0 30px;
-  top: 295px;
-  margin: 0;
+  width: 190px;
+  height: 40px;
+  top: 35px;
 
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 26px;
-
-  color: #1D3557;
-
+  border: 2px solid #457B9D;
+  box-sizing: border-box;
+  border-radius: 7px;
 }
 
-.colorescritta{
+.coloreScrittaFrame{
+
   position: absolute;
-  width: 294px;
-  height: 36px;
-  padding: 0 30px 0 30px;
-  top: 390px;
-  margin: 0;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 22px;
-  line-height: 26px;
-
-  color: #1D3557;
-}
-
-.colorescritta1{
-  position: relative;
-  width: 45px;
-  height: 45px;
-  left: -15px;
-  top: 350px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #000000;
-}
-
-.colorescritta2{
-  position: relative;
-  width: 45px;
-  height: 45px;
-  left: 15px;
-  top: 350px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #ff0303;
-}
-
-.colorescritta3{
-  position: relative;
-  width: 45px;
-  height: 45px;
-  left: 45px;
-  top: 350px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #135ac5;
-}
-
-.colorescritta4{
-  position: relative;
-  width: 45px;
-  height: 45px;
-  left: 75px;
-  top: 350px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #135ac5;
-}
-
-.colorescritta5{
-  position: relative;
-  width: 45px;
-  height: 45px;
-  left: 106px;
-  top: 350px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #135ac5;
-}
-
-.colorescritta6{
-  position: relative;
-  width: 45px;
-  height: 45px;
-  left: -240px;
-  top: 415px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #135ac5;
-}
-
-.colorescritta7{
-  position: relative;
-  width: 45px;
-  height: 45px;
-  left: -210px;
-  top: 415px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #135ac5;
-}
-
-.colorescritta8{
-  position: relative;
-  width: 45px;
-  height: 45px;
-  left: 180px;
-  top: 370px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #135ac5;
-}
-
-.colorescritta9{
-  position: relative;
-  width: 45px;
-  height: 45px;
-  left: 210px;
-  top: 370px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #135ac5;
-}
-
-.colorescritta10{
-  position: relative;
-  width: 45px;
-  height: 45px;
-  left: 240px;
-  top: 370px;
-  border-radius: 50%;
-
-  float: left;
-
-  background: #135ac5;
+  top: 490px;
+  width: 285px;
+  height: 160px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pagine5Options{
 
-  position: relative;
-  width: 395px;
+  position: absolute;
+  width: 135px;
   height: 130px;
   left: 0;
   right: 0;
-  top: 450px;
+  top: 690px;
   margin-left: auto;
   margin-right: auto;
 
 }
 
 .consiglio{
-  position: relative;
+
+  position: absolute;
   width: 150px;
   height: 36px;
-  left:-65px;
+  left: -120px;
   right: 0;
-  top: 60px;
+  top: 270px;
   margin-left: auto;
   margin-right: auto;
 
@@ -1062,12 +844,22 @@ color: #1D3557;
   transform: rotate(-14.31deg)
 }
 
+.loadconclusione{
+
+  position: absolute;
+  top: 90px;
+  width: 265px;
+  height: 255px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .conlusione{
   position: absolute;
   width: 268px;
   height: 299px;
-  left: 65px;
-  top: 506px;
 
   font-family: Roboto;
   font-style: normal;
@@ -1076,21 +868,6 @@ color: #1D3557;
   line-height: 16px;
 
   color: #1D3557;
-}
-
-.textFrame{
-  position: relative;
-  width: 280px;
-  height: 80px;
-
-  text-align: center;
-  padding: 0 55px 0 65px;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto;
-  top: 10px;
-
 }
 
 .subConc{
@@ -1126,10 +903,11 @@ color: #1D3557;
 }
 
 .caffeButtonConc {
-  position: relative;
+
+  position: absolute;
   width: 231px;
   height: 52px;
-  top: 135px;
+  top: 205px;
   left: 0;
   right: 0;
   margin: 50px auto 0 auto;
@@ -1146,7 +924,7 @@ color: #1D3557;
   height: 26px;
   left: 0;
   right: 0;
-  top: 405px;
+  top: 295px;
   margin: 30px auto 0 auto;
 
   font-family: Roboto;

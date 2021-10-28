@@ -9,24 +9,31 @@ import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
 
 function Page7() {
 
+    let root = document.documentElement;
+
+    root.style.setProperty('--green', "#FFFFFF");
+    
     return (
-        <div>
+        <>
             <div className="fase">
             <img src={fasi}  />
             </div>
+
             <div className="qrframe">
                 <div className="frame">
                     <img src={qr}  className="qr"/>
                 </div>
             </div>
+
             <div className="panel">
                 <div className="guideframe">
                     <div className="guide">
                        Hai finito!
                     </div>
                 </div>
-                <div className="textFrame">
-                    <p className="conclusione">
+
+                <div className="loadconclusione">
+                    <div className="conclusione">
                         <div className="subConc">
                             E ora?
                         </div>
@@ -51,19 +58,18 @@ function Page7() {
                             Puoi condividere il progetto con un amic*! é gratis e noi siamo contenti lo stesso!
                         </div>
 
-                    </p>
-                   
-                </div>
-                <footer>
+                    </div>
+
                     <div className="caffeButtonConc">
                         <Link to='/page1'className="caffe">Offrici un caffè</Link>
                     </div>
                     <div>
                         <Link to='/page1'className="backHomeConc">Torna alla home</Link>
                     </div>
-                </footer>
+
+                </div>
             </div>
-        </div>
+        </>
     )
   }
   
