@@ -591,6 +591,12 @@ body{
   float: left;
 
   background: #000000;
+
+}
+
+.colore1:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
 }
 
 .colore2{
@@ -606,6 +612,11 @@ body{
   background: #ff0000;
 }
 
+.colore2:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+}
+
 .colore3{
   position: absolute;
   width: 45px;
@@ -617,6 +628,11 @@ body{
   float: left;
 
   background: #0066ff;
+}
+
+.colore3:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
 }
 
 .colore4{
@@ -632,6 +648,11 @@ body{
   background: #ff00f2;
 }
 
+.colore4:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+}
+
 .colore5{
   position: absolute;
   width: 45px;
@@ -643,6 +664,11 @@ body{
   float: left;
 
   background: #00ff62;
+}
+
+.colore5:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
 }
 
 .colore6{
@@ -658,6 +684,11 @@ body{
   background: #00ccff;
 }
 
+.colore6:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+}
+
 .colore7{
   position: relative;
   width: 45px;
@@ -671,6 +702,11 @@ body{
   background: #127456;
 }
 
+.colore7:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+}
+
 .colore8{
   position: absolute;
   width: 45px;
@@ -682,6 +718,11 @@ body{
   float: left;
 
   background: #333333;
+}
+
+.colore8:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
 }
 
 .gradientframe{
