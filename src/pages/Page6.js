@@ -3,7 +3,7 @@ import qr from '../immagini/qr.svg';
 import share from '../immagini/Share.svg';
 import image from "../immagini/Image.svg";
 import avanti from "../immagini/Avanti.svg";
-import fasi from "../immagini/Group 9.svg";
+import fasi from "../immagini/Group 10.svg";
 import {Link} from 'react-router-dom';
 import './Pages.css';
 

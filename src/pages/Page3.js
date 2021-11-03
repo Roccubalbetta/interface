@@ -2,7 +2,7 @@ import React from "react";
 import qr from '../immagini/qr.svg';
 import avanti from "../immagini/Avanti.svg";
 import {Link} from 'react-router-dom';
-import fasi from "../immagini/Group 6.svg";
+import fasi from "../immagini/Group 7.svg";
 import './Pages.css';
 
 
@@ -75,7 +75,7 @@ function Page3() {
                         </div>
                     </Link>
                     
-                    <Link to ="/page2">
+                    <Link to ="/page25">
                         <div className="buttonIndietro">
                             <img src={avanti} className="indietro" />
                         </div>

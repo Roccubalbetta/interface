@@ -1,7 +1,7 @@
 import React from "react";
 import qr from '../immagini/qr.svg';
 import {Link} from 'react-router-dom';
-import fasi from "../immagini/Group 10.svg";
+import fasi from "../immagini/Group 11.svg";
 import './Pages.css';
 
 
@@ -25,7 +25,7 @@ function Page7() {
                 </div>
             </div>
 
-            <div className="panel">
+            <div className="panel7">
                 <div className="guideframe">
                     <div className="guide">
                        Hai finito!
