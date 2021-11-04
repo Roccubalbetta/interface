@@ -5,6 +5,9 @@ function Legal() {
   let root = document.documentElement;
 
   root.style.setProperty('--green', "#F1FAEE");
+
+  window.scrollTo(0, 0);
+
   return (
     <>
         <div className="testolegale">

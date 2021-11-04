@@ -1,5 +1,5 @@
 import React from "react";
-import qr from '../immagini/qr.svg';
+import qr from '../immagini/Qr.png';
 import avanti from "../immagini/Avanti.svg";
 import {Link} from 'react-router-dom';
 import fasi from "../immagini/Group 6.svg";
@@ -13,6 +13,8 @@ function Page25() {
     let root = document.documentElement;
 
     root.style.setProperty('--green', "#FFFFFF");
+
+    window.scrollTo(0, 0);
     
     return (
         <div>

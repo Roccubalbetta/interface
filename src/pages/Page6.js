@@ -1,5 +1,5 @@
 import React from "react";
-import qr from '../immagini/qr.svg';
+import qr from '../immagini/Qr.png';
 import share from '../immagini/Share.svg';
 import image from "../immagini/Image.svg";
 import avanti from "../immagini/Avanti.svg";
@@ -8,13 +8,13 @@ import {Link} from 'react-router-dom';
 import './Pages.css';
 
 
-import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
-
 function Page6() {
 
     let root = document.documentElement;
 
     root.style.setProperty('--green', "#FFFFFF");
+
+    window.scrollTo(0, 0);
     
     return (
         <>

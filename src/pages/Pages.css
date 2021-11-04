@@ -33,8 +33,11 @@ body{
   line-height: 56px;
   text-align: left;
   top: 120px;
-  padding: 0 65px;
-  margin: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
   
   color: #1D3557;
   
@@ -52,8 +55,11 @@ body{
   line-height: 28px;
   text-align: left;
   top: 380px;
-  padding: 0 65px;
-  margin: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
 
   color: #1D3557;
 }
@@ -66,7 +72,6 @@ body{
 
   text-align: center;
   padding-bottom: 80px;
-  padding: 0 65px;
   padding-bottom: 100px;
   left: 0;
   right: 0;
@@ -147,7 +152,7 @@ body{
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    padding: 0 50px;
+    padding-left: 10px;
 
   }
 

@@ -1,5 +1,5 @@
-import React from "react";
-import qr from '../immagini/qr.svg';
+import React, { useRef } from "react";
+import qr from '../immagini/Qr.png';
 import camera from "../immagini/Camerasvg.svg";
 import image from "../immagini/Image.svg";
 import avanti from "../immagini/Avanti.svg";
@@ -10,15 +10,21 @@ import './Pages.css';
 import { useState } from "react";
 
 
-import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
-
 function Page2() {
+
+    const bottomRef = useRef();
 
     const [show, setShow] = useState(false);
 
     let root = document.documentElement;
 
     root.style.setProperty('--green', "#FFFFFF");
+
+    //window.scrollTo(0, 0);
+
+    function bottomView() {
+        bottomRef.current.scrollIntoView({ behaviour: 'smooth'})
+    }
 
     return (
         <>
@@ -36,23 +42,23 @@ function Page2() {
                 </div>
                 <div className="loadOptions">
                     <div className="loadsx">
-                        <div onClick={() => setShow((s) => true)}>
-                            <img src={camera} className="icon" />
+                        <div onClick={() => setShow((s) => !s)}>
+                            <img src={camera} className="icon" onClick={bottomView}/>
                         </div>
                         <div className="loadLabel">
                             Fotocamera
                         </div>
                     </div>
                     <div className="loaddx">
-                        <div onClick={() => setShow((s) => true)}>
-                            <img src={image} className="icon" />
+                        <div onClick={() => setShow((s) => !s)}>
+                            <img src={image} className="icon" onClick={bottomView}/>
                         </div>
                         <div className="loadLabel">
                             Galleria
                         </div>
                     </div>
                 </div>
-                <div className="pagineOptions">
+                <div className="pagineOptions" ref={bottomRef}>
                     <Link to="/page25">
                         <div className="buttonAvanti" style={{ display: show ? "block" : "none" }}>
                         <img src={avanti} className="avanti" />
@@ -60,7 +66,7 @@ function Page2() {
                     </Link>
                     
                     <Link to ="/page1">
-                        <div className="buttonIndietro" onClick={() => setShow((s) => false)}>
+                        <div className="buttonIndietro">
                             <img src={avanti} className="indietro" />
                         </div>
                     </Link>

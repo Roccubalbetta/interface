@@ -4,9 +4,17 @@ import './Pages.css';
 
 
 function Page1() {
+
+    var scale = 'scale(1)';
+    document.body.style.webkitTransform =  scale;    // Chrome, Opera, Safari
+    document.body.style.msTransform =   scale;       // IE 9
+    document.body.style.transform = scale;     // General
+
     let root = document.documentElement;
 
     root.style.setProperty('--green', "#F1FAEE");
+
+    window.scrollTo(0, 0);
     return (
 
         <>
