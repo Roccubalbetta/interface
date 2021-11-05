@@ -33,11 +33,8 @@ body{
   line-height: 56px;
   text-align: left;
   top: 120px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 30px;
+  padding: 0 65px;
+  margin: 0;
   
   color: #1D3557;
   
@@ -46,7 +43,7 @@ body{
 .descr {
   position: absolute;
   width: 280px;
-  height: 247px;
+  height: 260px;
 
   font-family: Roboto;
   font-style: normal;
@@ -55,11 +52,8 @@ body{
   line-height: 28px;
   text-align: left;
   top: 380px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 30px;
+  padding: 0 65px;
+  margin: 0;
 
   color: #1D3557;
 }
@@ -72,6 +66,7 @@ body{
 
   text-align: center;
   padding-bottom: 80px;
+  padding: 0 65px;
   padding-bottom: 100px;
   left: 0;
   right: 0;
@@ -665,7 +660,7 @@ body{
 
 }
 
-.colore1:hover{
+.colore1:hover {
   outline: 3px solid #457B9D;
   outline-offset: 4px;
 }
