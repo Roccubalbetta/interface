@@ -7,6 +7,7 @@ import Page4 from './pages/Page4';
 import Page5 from './pages/Page5';
 import Page6 from './pages/Page6';
 import Page7 from './pages/Page7';
+import Page25 from './pages/Page25';
 
 
 import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
@@ -17,6 +18,7 @@ function Main (){
             <Switch>
             <Route path='/page1' component={Page1}/>
             <Route path='/page2' component={Page2}/>
+            <Route path='/page25' component={Page25}/>
             <Route path='/page3' component={Page3}/>
             <Route path='/page4' component={Page4}/>
             <Route path='/page5' component={Page5}/>

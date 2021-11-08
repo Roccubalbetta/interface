@@ -1,31 +1,40 @@
 import React from "react";
-import qr from '../immagini/qrpng.png';
-import avanti from "../immagini/avanti.png";
-import image from "../immagini/Image.png";
-import fasi from "../immagini/Group 7.png";
+import qr from '../immagini/Qr.png';
+import avanti from "../immagini/Avanti.svg";
+import image from "../immagini/Image.svg";
+import fasi from "../immagini/Group 8.svg";
 import {Link} from 'react-router-dom';
 import './Pages.css';
 
 
-import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
-
 function Page4() {
+
+    let root = document.documentElement;
+
+    root.style.setProperty('--green', "#FFFFFF");
+
+    window.scrollTo(0, 0);
+    
     return (
-        <div>
+        <>
+
             <div className="fase">
             <img src={fasi}  />
             </div>
+
             <div className="qrframe">
                 <div className="frame">
                     <img src={qr}  className="qr"/>
                 </div>
             </div>
+
             <div className="panel">
                 <div className="guideframe">
                     <div className="guide">
                         Aggiungi un logo <small>(opzionale)</small>
                     </div>
                 </div>
+
                 <div className="loadOptions">
                     <div className="loadlogo">
                         <div>
@@ -40,7 +49,7 @@ function Page4() {
                     </div>
                 </div>
                 <footer>
-                <div className="pagine2Options">
+                <div className="pagineOptions">
                     <Link to="/page5">
                         <div className="buttonAvanti">
                             <img src={avanti} className="avanti" />
@@ -55,7 +64,7 @@ function Page4() {
                 </div>
                 </footer>
             </div>
-        </div>
+        </>
     )
   }
   

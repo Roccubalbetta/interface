@@ -69,7 +69,7 @@ function Page2() {
     }
 
     return (
-        <div>
+        <>
             <div className="fase">
             <img src={fasi}  />
             </div>
@@ -78,11 +78,9 @@ function Page2() {
                     <img src={qr}  className="qr" alt={"qr icon"}/>
                 </div>
             </div>
-            <div className="panel">
-                <div className="guideframe">
-                    <div className="guide">
-                        Carica il tuo greenpass
-                    </div>
+            <div className="panel2">
+                <div className="guide">
+                    Carica il tuo greenpass
                 </div>
                 <div className="loadOptions">
                     <div className="loadsx" onClick={onCameraInputClick}>
@@ -122,9 +120,8 @@ function Page2() {
                         </div>
                     </Link>
                 </div>
-                </footer>
             </div>
-        </div>
+        </>
     )
   }
   
