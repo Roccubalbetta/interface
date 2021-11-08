@@ -1,9 +1,9 @@
 import React, {useRef, useState} from "react";
-import qr from '../immagini/qrpng.png';
-import camera from "../immagini/Camera.png";
-import image from "../immagini/Image.png";
-import avanti from "../immagini/avanti.png";
-import fasi from "../immagini/Group 5.png";
+import qr from '../immagini/Qr.png';
+import camera from "../immagini/Camerasvg.svg";
+import image from "../immagini/Image.svg";
+import avanti from "../immagini/Avanti.svg";
+import fasi from "../immagini/Group 5.svg";
 import {Link} from 'react-router-dom';
 import './Pages.css';
 import jsQR from "jsqr";
@@ -13,25 +13,25 @@ import 'react-html5-camera-photo/build/css/index.css';
 
 import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
 
-function Page2() {
+export default function Page2() {
 
     const [cameraIsVisible, setCameraVisibility] = useState(false);
 
     const inputFile = useRef(null)
 
-    function onImageSelectorClick(){
+    function onImageSelectorClick() {
         inputFile.current.click();
     }
 
-    function notifyQrCodeFound(code){
+    function notifyQrCodeFound(code) {
         console.log(code)
     }
 
-    function notifyQrCodeNotFound(){
+    function notifyQrCodeNotFound() {
         console.log("non ho trovato nessun qr")
     }
 
-    function onImageInput(file){
+    function onImageInput(file) {
         get(file, (error, imageData) => {
             if (error) {
                 console.log(error)
@@ -69,9 +69,9 @@ function Page2() {
     }
 
     return (
-        <>
+        <div>
             <div className="fase">
-            <img src={fasi}  />
+                <img src={fasi}  />
             </div>
             <div className="qrframe">
                 <div className="frame">
@@ -107,22 +107,23 @@ function Page2() {
                     />}
                 </div>
                 <footer>
-                <div className="pagineOptions">
-                    <Link to="/page3">
-                        <div className="buttonAvanti">
-                        <img src={avanti} className="avanti" />
-                        </div>
-                    </Link>
-                    
-                    <Link to ="/page1">
-                        <div className="buttonIndietro">
-                            <img src={avanti} className="indietro" />
-                        </div>
-                    </Link>
-                </div>
+                    <div className="pagineOptions">
+                        <Link to="/page3">
+                            <div className="buttonAvanti">
+                                <img src={avanti} className="avanti" />
+                            </div>
+                        </Link>
+
+                        <Link to ="/page1">
+                            <div className="buttonIndietro">
+                                <img src={avanti} className="indietro" />
+                            </div>
+                        </Link>
+                    </div>
+                </footer>
             </div>
-        </>
+        </div>
     )
-  }
-  
-export default Page2;
+}
+
+
