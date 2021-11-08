@@ -11,9 +11,11 @@ import {get} from '@andreekeberg/imagedata'
 import Camera from 'react-html5-camera-photo';
 import 'react-html5-camera-photo/build/css/index.css';
 
-import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
+
 
 export default function Page2() {
+
+    const [show, setShow] = useState(false);
 
     const [cameraIsVisible, setCameraVisibility] = useState(false);
 
@@ -24,10 +26,12 @@ export default function Page2() {
     }
 
     function notifyQrCodeFound(code) {
+
         console.log(code)
     }
 
     function notifyQrCodeNotFound() {
+        // messaggio di errore
         console.log("non ho trovato nessun qr")
     }
 
@@ -84,7 +88,7 @@ export default function Page2() {
                 </div>
                 <div className="loadOptions">
                     <div className="loadsx" onClick={onCameraInputClick}>
-                        <div>
+                        <div onClick={() => setShow((s) => true)}>
                             <img src={camera} className="icon" alt={"camera icon"}/>
                         </div>
                         <div className="loadLabel">
@@ -92,7 +96,7 @@ export default function Page2() {
                         </div>
                     </div>
                     <div className="loaddx" onClick={onImageSelectorClick}>
-                        <div>
+                        <div onClick={() => setShow((s) => true)}>
                             <img src={image} className="icon" alt={"gallery icon"}/>
                         </div>
                         <div className="loadLabel">
@@ -108,14 +112,14 @@ export default function Page2() {
                 </div>
                 <footer>
                     <div className="pagineOptions">
-                        <Link to="/page3">
-                            <div className="buttonAvanti">
+                        <Link to="/page25">
+                            <div className="buttonAvanti"  style={{ display: show ? "block" : "none" }}>
                                 <img src={avanti} className="avanti" />
                             </div>
                         </Link>
 
                         <Link to ="/page1">
-                            <div className="buttonIndietro">
+                            <div className="buttonIndietro" onClick={() => setShow((s) => false)}>
                                 <img src={avanti} className="indietro" />
                             </div>
                         </Link>
