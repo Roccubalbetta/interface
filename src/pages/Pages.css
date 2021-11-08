@@ -1,9 +1,29 @@
+:root {
+  --green: #F1FAEE;
+}
 
+body{
+  background-color: var(--green);
+}
+
+.fase{
+  
+  position: absolute;
+  top: 45px;
+  width: 267px;
+  height: auto;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+  padding: 0 0 0 0;
+  text-align: center;
+}
 
 .title {
 
-  position: static;
-  width: 294px;
+  position: absolute;
+  width: 280px;
   height: 200px;
 
   font-family: Roboto;
@@ -12,7 +32,8 @@
   font-size: 48px;
   line-height: 56px;
   text-align: left;
-  padding: 80px 50px 25px 60px;
+  top: 120px;
+  padding: 0 65px;
   margin: 0;
   
   color: #1D3557;
@@ -22,7 +43,7 @@
 .descr {
   position: absolute;
   width: 280px;
-  height: 247px;
+  height: 260px;
 
   font-family: Roboto;
   font-style: normal;
@@ -30,7 +51,8 @@
   font-size: 24px;
   line-height: 28px;
   text-align: left;
-  padding: 20px 50px 50px 60px;
+  top: 380px;
+  padding: 0 65px;
   margin: 0;
 
   color: #1D3557;
@@ -38,23 +60,25 @@
 
 .footer {
 
-  position: relative;
+  position: absolute;
   width: 280px;
-  height: 80px;
+  height: 127px;
 
   text-align: center;
-  padding: 0 50px 0 60px;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
+  padding-bottom: 80px;
+  padding: 0 65px;
+  padding-bottom: 100px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
   margin-right: auto;
-  top: 290px;
+  top: 635px;
 
 }
 
 .iniziaButton {
 
-  position: relative;
+  position: absolute;
   width: 121px;
   height: 52px;
   left: 0; 
@@ -66,6 +90,7 @@
   background: #A8DADC;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 26px;
+
       
 }
 
@@ -74,7 +99,7 @@
     position: absolute;
     width: 66px;
     height: 28px;
-    top: 10px;
+    top: 12px;
     left: 0;
     right: 0;
     margin-left: auto; 
@@ -94,12 +119,11 @@
   .tranqui {
     position: relative;
     width: 150px;
-    top: 30px;
+    top: 37px;
     left: 0;
     right: 0;
     margin-left: auto; 
     margin-right: auto;
-    padding-bottom: 50px;
     
     font-family: Roboto;
     font-style: italic;
@@ -107,16 +131,31 @@
     font-size: 13px;
     line-height: 15px;
     text-align: center;
+    top: 90px;
     
     color: #1D3557;
     
   } 
 
+  .testolegale{
+
+    position: absolute;
+    top: 100px;
+    width: 295px;
+    height: 1180px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+
+  }
+
   .sub1 {
+
     position: static;
-    width: auto;
+    width: 290px;
     height: auto;
-    margin: 75px 48px 0 48px;
 
     font-family: Roboto;
     font-style: normal;
@@ -128,10 +167,10 @@
   }
 
   .sub2 {
+
     position: static;
-    width: auto;
+    width: 290px;
     height: auto;
-    margin: 17px 48px 0 48px;
 
     font-family: Roboto;
     font-style: normal;
@@ -144,77 +183,70 @@
   }
 
   .sub3 {
+
     position: static;
-    width: auto;
+    width: 290px;
     height: auto;
-    margin: 17px 48px 0 48px;
 
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 28px;
+    padding-top: 25px;
 
     color: #1D3557;
 
   }
 
-  .sub4 {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 17px 48px 0 48px;
+  .caffeButton {
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+  position: absolute;
+  width: 231px;
+  height: 52px;
+  top: 1315px;
+  left: 0;
+  right: 0;
+  margin: 50px auto 0 auto;
 
-    color: #1D3557;
+  background: #A8DADC;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 26px;
+}
 
-  }
+.backHome {
 
-  .sub5 {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 17px 48px 0 48px;
+  position: absolute;
+  width: 130px;
+  height: 26px;
+  left: 0;
+  right: 0;
+  top: 1415px;
+  margin: 30px auto 0 auto;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-decoration-line: underline;
+  padding-bottom: 35px;
 
-    color: #1D3557;
-  }
+  color: #1D3557;
+}
 
-  .sub6 {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 17px 48px 0 48px;
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+.caffe {
 
-    color: #1D3557;
-  }
-
-  .caffe {
     position: absolute;
     width: 181px;
     height: 28px;
+    top:  12px;
     left: 0;
     right: 0;
     margin-left: auto; 
     margin-right: auto;
-    padding-bottom: 120px;
-    padding-top: 10px;
 
 
     font-family: Roboto;
@@ -227,57 +259,23 @@
 
     color: #1D3557;
 
-  }
+}
 
-  .caffeButton {
-    position: static;
-    width: 231px;
-    height: 52px;
-    top: 1000px;
-    left: 0;
-    right: 0;
-    margin: 50px auto 0 auto;
-
-    background: #A8DADC;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 26px;
-  }
-
-  .backHome {
-
-    position: absolute;
-    width: 130px;
-    height: 26px;
-    left: 0;
-    right: 0;
-    margin: 30px auto 0 auto;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    text-decoration-line: underline;
-
-    color: #1D3557;
-  }
-
-  .qrframe {
+.qrframe {
 
     position: relative;
     width: 280px;
-    height: 80px;
+    height: 207px;
   
     text-align: center;
-    padding: 0 50px 0 60px;
+    padding: 0 0 0 0;
     left: 0; 
     right: 0; 
     margin-left: auto; 
     margin-right: auto;
-    top: 120px;
+    top: 125px;
   
-  }
+}
 
 .frame {
 
@@ -297,17 +295,15 @@
 
 .panel {
   
-  position: relative;
+  position: absolute;
   width: 100%;
-  min-width: none;
-  height: 420px;
-  min-height: 50%;
+  height: 450px;
   left: 0;
   right: 0;
-  top: 330px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
+  top: 420px;
 
   background: #F1FAEE;
   box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
@@ -315,7 +311,97 @@
   
 }
 
+.panel2{
+  
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  top: 420px;
+
+  background: #F1FAEE;
+  box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 30px 30px 0 0;
+
+}
+
+.panel25{
+
+  position: absolute;
+  width: 100%;
+  height: 810px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  top: 420px;
+
+  background: #F1FAEE;
+  box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 30px 30px 0 0;
+}
+
+.panel3 {
+  
+  position: absolute;
+  width: 100%;
+  height: 605px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  top: 420px;
+
+  background: #F1FAEE;
+  box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 30px 30px 0 0;
+  
+}
+
+.panel5 {
+  
+  position: absolute;
+  width: 100%;
+  height: 820px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  top: 420px;
+
+  background: #F1FAEE;
+  box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 30px 30px 0 0;
+  
+}
+
+.panel7{
+
+  position: absolute;
+  width: 100%;
+  height: 570px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  top: 420px;
+
+  background: #F1FAEE;
+  box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 30px 30px 0 0;
+}
+
+
 .qr {
+  
   position: absolute;
   width: 144px;
   height: 144px;
@@ -327,27 +413,13 @@
   opacity: 0.6;
 }
 
-.guideframe {
-
-  position: relative;
-  width: 280px;
-  height: 80px;
-
-  text-align: center;
-  padding: 0 50px 0 60px;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto;
-  top: 310px;
-
-}
-
 
 .guide {
+
   position: absolute;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 30px;
+  top: 40px;
   left: 0;
   right: 0;
   bottom: 327px;
@@ -370,7 +442,7 @@
   position: absolute;
   width: 130px;
   height: 130px;
-  left: 48px;
+  left: 0;
 
   border: 1.5px solid #457B9D;
   box-sizing: border-box;
@@ -384,7 +456,7 @@
   position: absolute;
   width: 130px;
   height: 130px;
-  left: 218px;
+  right: 0;
 
   border: 1.5px solid #457B9D;
   box-sizing: border-box;
@@ -395,10 +467,10 @@
 
 .loadOptions {
 
-  position: relative;
-  width: 395px;
+  position: absolute;
+  top: 110px;
+  width: 295px;
   height: 130px;
-  top: 20px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -420,11 +492,11 @@
 
 .loadLabel {
   position: absolute;
-  width: 96px;
+  width: 130px;
   height: 26px;
   left: 0;
   right: 0;
-  bottom: 10px;
+  bottom: 7px;
   margin-left: auto;
   margin-right: auto;
 
@@ -441,12 +513,38 @@
 
 .pagineOptions {
 
-  position: relative;
-  width: 395px;
+  position: absolute;
+  width: 135px;
   height: 130px;
   left: 0;
   right: 0;
-  top: 80px;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.pagine3Options {
+
+  position: absolute;
+  width: 135px;
+  height: 130px;
+  left: 0;
+  right: 0;
+  top: 475px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.pagine25Options{
+
+  position: absolute;
+  width: 135px;
+  height: 130px;
+  left: 0;
+  right: 0;
+  top: 680px;
   margin-left: auto;
   margin-right: auto;
 
@@ -456,9 +554,8 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  left: 0;
-  right: 130px;
-  bottom: 30px;
+  right: 0;
+  bottom: 45px;
   margin-left: auto;
   background: #A8DADC;
   border: 1px solid #457B9D;
@@ -472,9 +569,8 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  left: 130px;
-  right: 0;
-  bottom: 30px;
+  left: 0;
+  bottom: 45px;
   margin-right: auto;
   background: #A8DADC;
   border: 1px solid #457B9D;
@@ -509,5 +605,460 @@
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
+
+.colorframe{
+
+  position: absolute;
+  top: 100px;
+  width: 285px;
+  height: 170px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.colore {
+  position: absolute;
+  width: auto;
+  height: 36px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+
+  color: #1D3557;
+
+}
+
+.colortable{
+
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  height: 120px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.colore1{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #000000;
+
+}
+
+.colore1:hover {
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+}
+
+.colore2{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 80px;
+  top: 0;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #ff0000;
+}
+
+.colore2:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+}
+
+.colore3{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 160px;
+  top: 0;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #0066ff;
+}
+
+.colore3:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+}
+
+.colore4{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 240px;
+  top: 0;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #ff00f2;
+}
+
+.colore4:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+}
+
+.colore5{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 0;
+  top: 70px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #00ff62;
+}
+
+.colore5:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+}
+
+.colore6{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 80px;
+  top: 70px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #00ccff;
+}
+
+.colore6:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+}
+
+.colore7{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 160px;
+  top: 70px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #127456;
+}
+
+.colore7:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+}
+
+.colore8{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 240px;
+  top: 70px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #333333;
+}
+
+.colore8:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+}
+
+.gradientframe{
+
+  position: absolute;
+  top: 305px;
+  width: 285px;
+  height: 170px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.dotframe {
+
+  position: absolute;
+  top: 510px;
+  width: 285px;
+  height: 170px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.loadlogo {
+
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1.5px solid #457B9D;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.logo {
+  position: absolute;
+  width: 73px;
+  height: 73px;
+  left: 159px;
+  top: 12px;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rimuovilogo{
+
+  position: absolute;
+  width: 130px;
+  height: 26px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 150px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-decoration-line: underline;
+
+color: #1D3557;
+}
+
+.scrittaframe{
+
+  position: absolute;
+  top: 300px;
+  width: 285px;
+  height: 110px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.text {
+
+  position: absolute;
+  width: 90%;
+  height: 40px;
+  top: 35px;
+
+  border: 2px solid #457B9D;
+  box-sizing: border-box;
+  border-radius: 7px;
+  }
+
+.fontframe{
+
+  position: absolute;
+  top: 396px;
+  width: 285px;
+  height: 170px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.tendina{
+  
+  position: absolute;
+  width: 190px;
+  height: 40px;
+  top: 35px;
+
+  border: 2px solid #457B9D;
+  box-sizing: border-box;
+  border-radius: 7px;
+}
+
+.coloreScrittaFrame{
+
+  position: absolute;
+  top: 490px;
+  width: 285px;
+  height: 160px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pagine5Options{
+
+  position: absolute;
+  width: 135px;
+  height: 130px;
+  left: 0;
+  right: 0;
+  top: 690px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.consiglio{
+
+  position: absolute;
+  width: 150px;
+  height: 36px;
+  left: -120px;
+  right: 0;
+  top: 270px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+
+  color: #1D3557;
+
+  transform: rotate(-14.31deg)
+}
+
+.loadconclusione{
+
+  position: absolute;
+  top: 90px;
+  width: 265px;
+  height: 255px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.conlusione{
+  position: absolute;
+  width: 268px;
+  height: 299px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #1D3557;
+}
+
+.subConc{
+
+  position: static;
+    width: 268px;
+    height: auto;
+    margin: 7px 0 7px 0;
+    padding: 7px 0 8px 0;
+    top: 106px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 16px;
+    text-align: left;
+
+    color: #1D3557;
+}
+
+.testoConc{
+  position: static;
+  width: 268px;
+  height: auto;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 16px;
+  text-align: left;
+
+  color: #1D3557;
+}
+
+.caffeButtonConc {
+
+  position: absolute;
+  width: 231px;
+  height: 52px;
+  top: 290px;
+  left: 0;
+  right: 0;
+  margin: 50px auto 0 auto;
+
+  background: #A8DADC;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 26px;
+}
+
+.backHomeConc {
+
+  position: absolute;
+  width: 130px;
+  height: 26px;
+  left: 0;
+  right: 0;
+  top: 390px;
+  margin: 30px auto 0 auto;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-decoration-line: underline;
+
+  color: #1D3557;
+}
+
+
 
   
