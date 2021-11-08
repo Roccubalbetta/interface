@@ -40,14 +40,14 @@ function Page3() {
                     </div>
 
                     <div className="colortable">
-                    <div className="colore1"></div>
-                    <div className="colore2"></div>
-                    <div className="colore3"></div>
-                    <div className="colore4"></div>
-                    <div className="colore5"></div>
-                    <div className="colore6"></div>
-                    <div className="colore7"></div>
-                    <div className="colore8"></div>
+                    <button className="colore1"></button>
+                    <button className="colore2"></button>
+                    <button className="colore3"></button>
+                    <button className="colore4"></button>
+                    <button className="colore5"></button>
+                    <button className="colore6"></button>
+                    <button className="colore7"></button>
+                    <button className="colore8"></button>
                     </div>
                 </div>
 
@@ -55,15 +55,15 @@ function Page3() {
                     <div className="colore">
                         Gradiente
                     </div>
-                    <div className="colortable">
-                    <div className="colore1"></div>
-                    <div className="colore2"></div>
-                    <div className="colore3"></div>
-                    <div className="colore4"></div>
-                    <div className="colore5"></div>
-                    <div className="colore6"></div>
-                    <div className="colore7"></div>
-                    <div className="colore8"></div>
+                    <div className="gradienttable">
+                    <button className="gradiente1"></button>
+                    <button className="gradiente2"></button>
+                    <button className="gradiente3"></button>
+                    <button className="gradiente4"></button>
+                    <button className="gradiente5"></button>
+                    <button className="gradiente6"></button>
+                    <button className="gradiente7"></button>
+                    <button className="gradiente8"></button>
                     </div>
                 </div>
 
