@@ -6,6 +6,7 @@ import avanti from "../immagini/Avanti.svg";
 import fasi from "../immagini/Group 10.svg";
 import {Link} from 'react-router-dom';
 import './Pages.css';
+import "@fontsource/nanum-pen-script"; // Defaults to weight 400.
 
 
 function Page6() {
@@ -27,7 +28,6 @@ function Page6() {
                     <img src={qr}  className="qr"/>
                 </div>
             </div>
-
             <div className="panel">
                 <div className="guideframe">
                     <div className="guide">
@@ -55,7 +55,7 @@ function Page6() {
                 </div>
 
                 <div className="consiglio">
-                    Inviatela su whatsapp (così non la perdi)
+                    Inviatela su Whatsapp (così non la perdi)
                 </div>
 
                 <div className="pagineOptions">

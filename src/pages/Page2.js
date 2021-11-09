@@ -10,10 +10,19 @@ import jsQR from "jsqr";
 import {get} from '@andreekeberg/imagedata'
 import Camera from 'react-html5-camera-photo';
 import 'react-html5-camera-photo/build/css/index.css';
+import { useAlert } from "react-alert";
 
 
 
 export default function Page2() {
+
+    const alert = useAlert();
+
+    let root = document.documentElement;
+
+    root.style.setProperty('--green', "#FFFFFF");
+
+    window.scrollTo(0, 0);
 
     const [show, setShow] = useState(false);
 
@@ -26,12 +35,13 @@ export default function Page2() {
     }
 
     function notifyQrCodeFound(code) {
+        alert.success("ho trovato qr");
 
         console.log(code)
     }
 
     function notifyQrCodeNotFound() {
-        // messaggio di errore
+        alert.show("non ho trovato nessun qr");
         console.log("non ho trovato nessun qr")
     }
 

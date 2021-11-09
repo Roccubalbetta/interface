@@ -7,9 +7,12 @@ import './Pages.css';
 
 import { CirclePicker } from "react-color";
 
+
+// come cambiare on click colori e creare un color picker multiplo?
+
 class Colore1 extends React.Component {
-  
-    handleChangeComplete = (color) => {
+
+      handleChangeComplete = (color, event) => {
     };
   
     render() {
@@ -20,7 +23,7 @@ class Colore1 extends React.Component {
             circleSize={45}
             circleSpacing={35}
             width={{width: "100%"}}
-            onChangeComplete={ this.handleChangeComplete }>
+            >
         </CirclePicker>
       );
     }
@@ -28,7 +31,7 @@ class Colore1 extends React.Component {
 
   class Colore2 extends React.Component {
   
-    handleChangeComplete = (color) => {
+    handleChangeComplete = (color, event) => {
     };
   
     render() {
@@ -47,7 +50,7 @@ class Colore1 extends React.Component {
 
   class Colore3 extends React.Component {
   
-    handleChangeComplete = (color) => {
+    handleChangeComplete = (color, event) => {
     };
   
     render() {
@@ -99,7 +102,7 @@ function Page25() {
                     </div>
 
                     <div className="colortable">
-                    <Colore1/>
+                    <Colore1 />
                     </div>
                 </div>
 
