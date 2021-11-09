@@ -5,6 +5,8 @@ import {Link} from 'react-router-dom';
 import fasi from "../immagini/Group 7.svg";
 import './Pages.css';
 
+import { CirclePicker } from "react-color";
+
 
 function Page3() {
 
@@ -40,14 +42,13 @@ function Page3() {
                     </div>
 
                     <div className="colortable">
-                    <button className="colore1"></button>
-                    <button className="colore2"></button>
-                    <button className="colore3"></button>
-                    <button className="colore4"></button>
-                    <button className="colore5"></button>
-                    <button className="colore6"></button>
-                    <button className="colore7"></button>
-                    <button className="colore8"></button>
+                    <CirclePicker 
+                        colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
+                                 "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+                        circleSize={45}
+                        circleSpacing={35}
+                        width={{width: "100%"}}>
+                    </CirclePicker>
                     </div>
                 </div>
 
@@ -56,14 +57,13 @@ function Page3() {
                         Gradiente
                     </div>
                     <div className="gradienttable">
-                    <button className="gradiente1"></button>
-                    <button className="gradiente2"></button>
-                    <button className="gradiente3"></button>
-                    <button className="gradiente4"></button>
-                    <button className="gradiente5"></button>
-                    <button className="gradiente6"></button>
-                    <button className="gradiente7"></button>
-                    <button className="gradiente8"></button>
+                    <CirclePicker 
+                        colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
+                                 "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+                        circleSize={45}
+                        circleSpacing={35}
+                        width={{width: "100%"}}>
+                    </CirclePicker>
                     </div>
                 </div>
 

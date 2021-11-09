@@ -5,8 +5,65 @@ import {Link} from 'react-router-dom';
 import fasi from "../immagini/Group 6.svg";
 import './Pages.css';
 
+import { CirclePicker } from "react-color";
 
-import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
+class Colore1 extends React.Component {
+  
+    handleChangeComplete = (color) => {
+    };
+  
+    render() {
+      return (
+        <CirclePicker 
+            colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
+                     "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+            circleSize={45}
+            circleSpacing={35}
+            width={{width: "100%"}}
+            onChangeComplete={ this.handleChangeComplete }>
+        </CirclePicker>
+      );
+    }
+  }
+
+  class Colore2 extends React.Component {
+  
+    handleChangeComplete = (color) => {
+    };
+  
+    render() {
+      return (
+        <CirclePicker 
+            colors={["#000", "#e91e63", "#9c27b0", "#673ab7",
+                     "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+            circleSize={45}
+            circleSpacing={35}
+            width={{width: "100%"}}
+            onChangeComplete={ this.handleChangeComplete }>
+        </CirclePicker>
+      );
+    }
+  }
+
+  class Colore3 extends React.Component {
+  
+    handleChangeComplete = (color) => {
+    };
+  
+    render() {
+      return (
+        <CirclePicker 
+            colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
+                     "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+            circleSize={45}
+            circleSpacing={35}
+            width={{width: "100%"}}
+            onChangeComplete={ this.handleChangeComplete }>
+        </CirclePicker>
+      );
+    }
+  }
+
 
 function Page25() {
 
@@ -42,14 +99,7 @@ function Page25() {
                     </div>
 
                     <div className="colortable">
-                    <button className="colore1"></button>
-                    <button className="colore2"></button>
-                    <button className="colore3"></button>
-                    <button className="colore4"></button>
-                    <button className="colore5"></button>
-                    <button className="colore6"></button>
-                    <button className="colore7"></button>
-                    <button className="colore8"></button>
+                    <Colore1/>
                     </div>
                 </div>
 
@@ -58,14 +108,7 @@ function Page25() {
                         Quadrati piccoli
                     </div>
                     <div className="colortable">
-                    <button className="colore1"></button>
-                    <button className="colore2"></button>
-                    <button className="colore3"></button>
-                    <button className="colore4"></button>
-                    <button className="colore5"></button>
-                    <button className="colore6"></button>
-                    <button className="colore7"></button>
-                    <button className="colore8"></button>
+                    <Colore2 />
                     </div>
                 </div>
 
@@ -74,14 +117,7 @@ function Page25() {
                         Quadrati piccoli
                     </div>
                     <div className="colortable">
-                    <button className="colore1"></button>
-                    <button className="colore2"></button>
-                    <button className="colore3"></button>
-                    <button className="colore4"></button>
-                    <button className="colore5"></button>
-                    <button className="colore6"></button>
-                    <button className="colore7"></button>
-                    <button className="colore8"></button>
+                    <Colore3 />
                     </div>
                 </div>
 
