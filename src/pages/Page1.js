@@ -24,11 +24,11 @@ function Page1() {
             </div>
             <div className="footer">
                 <Link to="/page2">
-                    <div className="iniziaButton">
-                        <h2>
-                            <div className="inizia">Inizia</div>
+                    <button className="iniziaButton">
+                        <h2 className="inizia">
+                            Inizia
                         </h2>
-                    </div>
+                    </button>
                 </Link>
                 <div className="tranqui">
                     Gratis e sicuro: non ti fidi?<Link to='/legal' style={{ color: "#1D3557" }}>Tranquillizzati qui</Link>
