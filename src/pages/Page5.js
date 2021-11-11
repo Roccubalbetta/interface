@@ -5,6 +5,8 @@ import fasi from "../immagini/Group 9.svg";
 import {Link} from 'react-router-dom';
 import './Pages.css';
 
+import { CirclePicker } from "react-color";
+
 
 function Page5() {
 
@@ -74,15 +76,13 @@ function Page5() {
                         Colore scritta
                     </div>
                     <div className="colortable">
-                        <div className="colore1"></div>
-                        <div className="colore2"></div>
-                        <div className="colore3"></div>
-                        <div className="colore4"></div>
-                        <div className="colore5"></div>
-                        <div className="colore6"></div>
-                        <div className="colore7"></div>
-                        <div className="colore8"></div>
-                        <div className="colore9"></div>
+                    <CirclePicker 
+                        colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
+                                 "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+                        circleSize={45}
+                        circleSpacing={35}
+                        width={{width: "100%"}}>
+                    </CirclePicker>
                     </div>
                 </div>
 

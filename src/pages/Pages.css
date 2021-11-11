@@ -2,6 +2,7 @@
   --green: #F1FAEE;
 }
 
+
 body{
   background-color: var(--green);
 }
@@ -22,7 +23,6 @@ body{
 
 .title {
 
-  position: absolute;
   width: 280px;
   height: 200px;
 
@@ -32,8 +32,7 @@ body{
   font-size: 48px;
   line-height: 56px;
   text-align: left;
-  top: 120px;
-  padding: 0 65px;
+  padding: 120px 65px 60px;
   margin: 0;
   
   color: #1D3557;
@@ -41,7 +40,8 @@ body{
 }
 
 .descr {
-  position: absolute;
+
+
   width: 280px;
   height: 260px;
 
@@ -51,7 +51,6 @@ body{
   font-size: 24px;
   line-height: 28px;
   text-align: left;
-  top: 380px;
   padding: 0 65px;
   margin: 0;
 
@@ -60,7 +59,6 @@ body{
 
 .footer {
 
-  position: absolute;
   width: 280px;
   height: 127px;
 
@@ -72,13 +70,11 @@ body{
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  top: 635px;
 
 }
 
 .iniziaButton {
 
-  position: absolute;
   width: 121px;
   height: 52px;
   left: 0; 
@@ -90,16 +86,15 @@ body{
   background: #A8DADC;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 26px;
+  border: none;
 
       
 }
 
   .inizia {
 
-    position: absolute;
     width: 66px;
     height: 28px;
-    top: 12px;
     left: 0;
     right: 0;
     margin-left: auto; 
@@ -113,17 +108,19 @@ body{
     text-align: center;
     text-decoration: none;
     color: #1D3557;
+    margin-top: 0;
+    margin-bottom: 0;
 
   }
 
   .tranqui {
-    position: relative;
+
     width: 150px;
-    top: 37px;
     left: 0;
     right: 0;
     margin-left: auto; 
     margin-right: auto;
+    margin-top: 30px;
     
     font-family: Roboto;
     font-style: italic;
@@ -131,7 +128,6 @@ body{
     font-size: 13px;
     line-height: 15px;
     text-align: center;
-    top: 90px;
     
     color: #1D3557;
     
@@ -399,7 +395,6 @@ body{
   border-radius: 30px 30px 0 0;
 }
 
-
 .qr {
   
   position: absolute;
@@ -412,7 +407,6 @@ body{
   margin-right: auto;
   opacity: 0.6;
 }
-
 
 .guide {
 
@@ -657,12 +651,14 @@ body{
   float: left;
 
   background: #000000;
+  border: none;
 
 }
 
-.colore1:hover {
+.colore1:focus {
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
 }
 
 .colore2{
@@ -676,11 +672,14 @@ body{
   float: left;
 
   background: #ff0000;
+
+  border: none;
 }
 
-.colore2:hover{
+.colore2:focus{
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
 }
 
 .colore3{
@@ -694,11 +693,13 @@ body{
   float: left;
 
   background: #0066ff;
+  border: none;
 }
 
-.colore3:hover{
+.colore3:focus{
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
 }
 
 .colore4{
@@ -712,11 +713,13 @@ body{
   float: left;
 
   background: #ff00f2;
+  border: none;
 }
 
-.colore4:hover{
+.colore4:focus{
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
 }
 
 .colore5{
@@ -730,11 +733,13 @@ body{
   float: left;
 
   background: #00ff62;
+  border: none;
 }
 
-.colore5:hover{
+.colore5:focus{
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
 }
 
 .colore6{
@@ -748,11 +753,13 @@ body{
   float: left;
 
   background: #00ccff;
+  border: none;
 }
 
-.colore6:hover{
+.colore6:focus{
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
 }
 
 .colore7{
@@ -766,11 +773,13 @@ body{
   float: left;
 
   background: #127456;
+  border: none;
 }
 
-.colore7:hover{
+.colore7:focus{
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
 }
 
 .colore8{
@@ -784,11 +793,13 @@ body{
   float: left;
 
   background: #333333;
+  border: none;
 }
 
-.colore8:hover{
+.colore8:focus{
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
 }
 
 .gradientframe{
@@ -801,8 +812,199 @@ body{
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  border: none;
 
 }
+
+.colore {
+  position: absolute;
+  width: auto;
+  height: 36px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+
+  color: #1D3557;
+
+}
+
+.gradienttable{
+
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  height: 120px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.gradiente1{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #000000;
+  border: none;
+
+}
+
+.gradiente1:focus {
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
+.gradiente2{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 80px;
+  top: 0;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #ff0000;
+  border: none;
+}
+
+.gradiente2:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
+.gradiente3{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 160px;
+  top: 0;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #0066ff;
+  border: none;
+}
+
+.gradiente3:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
+.gradiente4{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 240px;
+  top: 0;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #ff00f2;
+  border: none;
+}
+
+.gradiente4:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
+.gradiente5{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 0;
+  top: 70px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #00ff62;
+  border: none;
+}
+
+.gradiente5:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
+.gradiente6{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 80px;
+  top: 70px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #00ccff;
+  border: none;
+}
+
+.gradiente6:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
+.gradiente7{
+  position: relative;
+  width: 45px;
+  height: 45px;
+  left: 160px;
+  top: 70px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #127456;
+  border: none;
+}
+
+.gradiente7:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
+.gradiente8{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 240px;
+  top: 70px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #333333;
+  border: none;
+}
+
+.gradiente8:hover{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
 
 .dotframe {
 
@@ -946,16 +1148,15 @@ color: #1D3557;
   position: absolute;
   width: 150px;
   height: 36px;
-  left: -120px;
+  left: -110px;
   right: 0;
-  top: 270px;
+  top: 275px;
   margin-left: auto;
   margin-right: auto;
 
-  font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-style: normal;
+  font-family: "Nanum Pen Script";
   font-weight: normal;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 17px;
   text-align: center;
 

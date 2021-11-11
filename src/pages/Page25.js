@@ -5,8 +5,68 @@ import {Link} from 'react-router-dom';
 import fasi from "../immagini/Group 6.svg";
 import './Pages.css';
 
+import { CirclePicker } from "react-color";
 
-import {Switch,Route,Redirect, withRouter} from 'react-router-dom';
+
+// come cambiare on click colori e creare un color picker multiplo?
+
+class Colore1 extends React.Component {
+
+      handleChangeComplete = (color, event) => {
+    };
+  
+    render() {
+      return (
+        <CirclePicker 
+            colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
+                     "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+            circleSize={45}
+            circleSpacing={35}
+            width={{width: "100%"}}
+            >
+        </CirclePicker>
+      );
+    }
+  }
+
+  class Colore2 extends React.Component {
+  
+    handleChangeComplete = (color, event) => {
+    };
+  
+    render() {
+      return (
+        <CirclePicker 
+            colors={["#000", "#e91e63", "#9c27b0", "#673ab7",
+                     "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+            circleSize={45}
+            circleSpacing={35}
+            width={{width: "100%"}}
+            onChangeComplete={ this.handleChangeComplete }>
+        </CirclePicker>
+      );
+    }
+  }
+
+  class Colore3 extends React.Component {
+  
+    handleChangeComplete = (color, event) => {
+    };
+  
+    render() {
+      return (
+        <CirclePicker 
+            colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
+                     "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+            circleSize={45}
+            circleSpacing={35}
+            width={{width: "100%"}}
+            onChangeComplete={ this.handleChangeComplete }>
+        </CirclePicker>
+      );
+    }
+  }
+
 
 function Page25() {
 
@@ -42,14 +102,7 @@ function Page25() {
                     </div>
 
                     <div className="colortable">
-                    <div className="colore1"></div>
-                    <div className="colore2"></div>
-                    <div className="colore3"></div>
-                    <div className="colore4"></div>
-                    <div className="colore5"></div>
-                    <div className="colore6"></div>
-                    <div className="colore7"></div>
-                    <div className="colore8"></div>
+                    <Colore1 />
                     </div>
                 </div>
 
@@ -58,14 +111,7 @@ function Page25() {
                         Quadrati piccoli
                     </div>
                     <div className="colortable">
-                    <div className="colore1"></div>
-                    <div className="colore2"></div>
-                    <div className="colore3"></div>
-                    <div className="colore4"></div>
-                    <div className="colore5"></div>
-                    <div className="colore6"></div>
-                    <div className="colore7"></div>
-                    <div className="colore8"></div>
+                    <Colore2 />
                     </div>
                 </div>
 
@@ -74,14 +120,7 @@ function Page25() {
                         Quadrati piccoli
                     </div>
                     <div className="colortable">
-                    <div className="colore1"></div>
-                    <div className="colore2"></div>
-                    <div className="colore3"></div>
-                    <div className="colore4"></div>
-                    <div className="colore5"></div>
-                    <div className="colore6"></div>
-                    <div className="colore7"></div>
-                    <div className="colore8"></div>
+                    <Colore3 />
                     </div>
                 </div>
 
