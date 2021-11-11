@@ -4,6 +4,7 @@ import avanti from "../immagini/Avanti.svg";
 import {Link} from 'react-router-dom';
 import fasi from "../immagini/Group 6.svg";
 import './Pages.css';
+import { useLocation } from 'react-router-dom'
 
 import { CirclePicker } from "react-color";
 
@@ -75,6 +76,9 @@ function Page25() {
     root.style.setProperty('--green', "#FFFFFF");
 
     window.scrollTo(0, 0);
+
+    const location = useLocation()
+    console.log(location.state)
     
     return (
         <div>

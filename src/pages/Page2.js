@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import qr from '../immagini/Qr.png';
 import camera from "../immagini/Camerasvg.svg";
 import image from "../immagini/Image.svg";
@@ -11,6 +11,7 @@ import {get} from '@andreekeberg/imagedata'
 import Camera from 'react-html5-camera-photo';
 import 'react-html5-camera-photo/build/css/index.css';
 import { useAlert } from "react-alert";
+import QRCodeStyling from "qr-code-styling";
 
 
 
@@ -26,6 +27,48 @@ export default function Page2() {
 
     const [show, setShow] = useState(false);
 
+    const [qrFound, setFound] = useState(false)
+
+    const [qrOptions, setQrOptions] = useState(
+        {
+            data : "https://master.d2g7knv9wv4iw9.amplifyapp.com/",
+            width: 1000,
+            height: 1000,
+            type: "svg",
+            margin: 2,
+            image: "",
+            dotsOptions: {
+                color: "#000000",
+                type: "square",
+                gradient : ""
+            },
+            imageOptions: {
+                crossOrigin: "anonymous",
+                hideBackgroundDots: false,
+                imageSize : 0.3,
+                margin: 5
+            },
+            cornersSquareOptions: {
+                color: "#000000",
+                type: "square",
+                gradient : ""
+            },
+            cornersDotOptions: {
+                color: "#000000",
+                type: "square",
+                gradient : ""
+            },
+        },
+    )
+
+    const [qrCode, setQrcode] = useState(new QRCodeStyling(qrOptions))
+    useEffect(() => {
+        qrCode.update(qrOptions)
+    })
+
+    qrCode.append(document.getElementById("qrPanel"))
+    qrCode.update(qrOptions)
+
     const [cameraIsVisible, setCameraVisibility] = useState(false);
 
     const inputFile = useRef(null)
@@ -36,8 +79,11 @@ export default function Page2() {
 
     function notifyQrCodeFound(code) {
         alert.success("ho trovato qr");
-
-        console.log(code)
+        setQrOptions({
+            ...qrOptions,
+            data : code
+        })
+        setFound(true)
     }
 
     function notifyQrCodeNotFound() {
@@ -89,7 +135,10 @@ export default function Page2() {
             </div>
             <div className="qrframe">
                 <div className="frame">
-                    <img src={qr}  className="qr" alt={"qr icon"}/>
+                    {!qrFound ? <img src={qr}  className="qr" alt={"qr icon"}/> : null}
+                    <svg visibility={!qrFound ? "hidden" : "visible"} id={"qrPanel"} viewBox="0 0 1000 1000" style={{width: 200}}>
+                        <img src={qr}  className="qr" alt={"qr icon"}/>
+                    </svg>
                 </div>
             </div>
             <div className="panel2">
@@ -122,13 +171,13 @@ export default function Page2() {
                 </div>
                 <footer>
                     <div className="pagineOptions">
-                        <Link to="/page25">
+                        <Link to={{pathname : '/page25' , state: { qrOptions : qrOptions }}} >
                             <div className="buttonAvanti"  style={{ display: show ? "block" : "none" }}>
                                 <img src={avanti} className="avanti" />
                             </div>
                         </Link>
 
-                        <Link to ="/page1">
+                        <Link to ="/page1" >
                             <div className="buttonIndietro" onClick={() => setShow((s) => false)}>
                                 <img src={avanti} className="indietro" />
                             </div>
