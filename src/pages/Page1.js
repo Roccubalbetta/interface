@@ -16,12 +16,14 @@ function Page1() {
     return (
 
         <>
+            <div className="testoIniziale">
             <div>
                 <h1 className="title">Rendi il tuo greenpass unico</h1>
             </div>
             <div>
                 <h2 className="descr">Personalizza il tuo greenpass in 30 secondi, gratis</h2>
             </div>
+            
             <div className="footer">
                 <Link to="/page2">
                     <button className="iniziaButton">
@@ -33,6 +35,7 @@ function Page1() {
                 <div className="tranqui">
                     Gratis e sicuro: non ti fidi?<Link to='/legal' style={{ color: "#1D3557" }}>Tranquillizzati qui</Link>
                 </div>
+            </div>
             </div>
         </>
     )

@@ -7,6 +7,32 @@ import './Pages.css';
 
 import { CirclePicker } from "react-color";
 
+class Colore1 extends React.Component {
+
+    state = {
+      start: "#000000",
+    };
+  
+    handleChangeComplete = (color) => {
+      this.setState({ ...this.state, start: color.hex  });
+    };
+    
+      render() {
+        return (
+          <CirclePicker 
+              color={this.state.start}
+              colors={["#000000", "#e91e63", "#9c27b0", "#673ab7",
+                       "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+              circleSize={45}
+              circleSpacing={35}
+              width={{width: "100%"}}
+              onChangeComplete={ this.handleChangeComplete }
+              >
+          </CirclePicker>
+        );
+      }
+    }
+
 
 function Page5() {
 
@@ -39,14 +65,14 @@ function Page5() {
                         Cornice
                     </div>
                     <div className="colortable">
-                    <div className="colore1"></div>
-                    <div className="colore2"></div>
-                    <div className="colore3"></div>
-                    <div className="colore4"></div>
-                    <div className="colore5"></div>
-                    <div className="colore6"></div>
-                    <div className="colore7"></div>
-                    <div className="colore8"></div>
+                    <div className="scelta1"></div>
+                    <div className="scelta2"></div>
+                    <div className="scelta3"></div>
+                    <div className="scelta4"></div>
+                    <div className="scelta5"></div>
+                    <div className="scelta6"></div>
+                    <div className="scelta7"></div>
+                    <div className="scelta8"></div>
                     </div>
                 </div>
 
@@ -76,13 +102,7 @@ function Page5() {
                         Colore scritta
                     </div>
                     <div className="colortable">
-                    <CirclePicker 
-                        colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
-                                 "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
-                        circleSize={45}
-                        circleSpacing={35}
-                        width={{width: "100%"}}>
-                    </CirclePicker>
+                    <Colore1 />
                     </div>
                 </div>
 

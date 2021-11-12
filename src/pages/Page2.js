@@ -36,12 +36,14 @@ export default function Page2() {
 
     function notifyQrCodeFound(code) {
         alert.success("ho trovato qr");
+        //setShow((s) => true)
 
         console.log(code)
     }
 
     function notifyQrCodeNotFound() {
         alert.show("non ho trovato nessun qr");
+        //setShow((s) => false)
         console.log("non ho trovato nessun qr")
     }
 
@@ -120,7 +122,6 @@ export default function Page2() {
                         onTakePhotoAnimationDone = { (dataUri) => { handleTakePhoto(dataUri); } }
                     />}
                 </div>
-                <footer>
                     <div className="pagineOptions">
                         <Link to="/page25">
                             <div className="buttonAvanti"  style={{ display: show ? "block" : "none" }}>
@@ -134,7 +135,6 @@ export default function Page2() {
                             </div>
                         </Link>
                     </div>
-                </footer>
             </div>
         </div>
     )

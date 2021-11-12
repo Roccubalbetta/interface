@@ -28,7 +28,7 @@ function Page6() {
                     <img src={qr}  className="qr"/>
                 </div>
             </div>
-            <div className="panel">
+            <div className="panel6">
                 <div className="guideframe">
                     <div className="guide">
                         Scarica la tua opera
@@ -53,9 +53,10 @@ function Page6() {
                         </div>
                     </div>
                 </div>
-
-                <div className="consiglio">
-                    Inviatela su Whatsapp (così non la perdi)
+                <div className="consiglioFrame">
+                    <div className="consiglio">
+                         Inviatela su Whatsapp (così non la perdi)
+                    </div>
                 </div>
 
                 <div className="pagineOptions">
@@ -65,7 +66,7 @@ function Page6() {
                         </div>
                     </Link>
                     
-                    <Link to ="/page1">
+                    <Link to ="/page5">
                         <div className="buttonIndietro">
                             <img src={avanti} className="indietro" />
                         </div>

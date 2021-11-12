@@ -8,21 +8,26 @@ import './Pages.css';
 import { CirclePicker } from "react-color";
 
 
-// come cambiare on click colori e creare un color picker multiplo?
-
 class Colore1 extends React.Component {
 
-      handleChangeComplete = (color, event) => {
-    };
+  state = {
+    start: "#000000",
+  };
+
+  handleChangeComplete = (color) => {
+    this.setState({ ...this.state, start: color.hex  });
+  };
   
     render() {
       return (
         <CirclePicker 
-            colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
+            color={this.state.start}
+            colors={["#000000", "#e91e63", "#9c27b0", "#673ab7",
                      "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
             circleSize={45}
             circleSpacing={35}
             width={{width: "100%"}}
+            onChangeComplete={ this.handleChangeComplete }
             >
         </CirclePicker>
       );
@@ -31,37 +36,51 @@ class Colore1 extends React.Component {
 
   class Colore2 extends React.Component {
   
-    handleChangeComplete = (color, event) => {
+    state = {
+      start: "#000000",
     };
   
-    render() {
-      return (
-        <CirclePicker 
-            colors={["#000", "#e91e63", "#9c27b0", "#673ab7",
-                     "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
-            circleSize={45}
-            circleSpacing={35}
-            width={{width: "100%"}}
-            onChangeComplete={ this.handleChangeComplete }>
-        </CirclePicker>
-      );
-    }
+    handleChangeComplete = (color) => {
+      this.setState({ ...this.state, start: color.hex  });
+    };
+    
+      render() {
+        return (
+          <CirclePicker 
+              color={this.state.start}
+              colors={["#000000", "#e91e63", "#9c27b0", "#673ab7",
+                       "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+              circleSize={45}
+              circleSpacing={35}
+              width={{width: "100%"}}
+              onChangeComplete={ this.handleChangeComplete }
+              >
+          </CirclePicker>
+        );
+      }
   }
 
   class Colore3 extends React.Component {
   
-    handleChangeComplete = (color, event) => {
-    };
+   state = {
+    start: "#000000",
+  };
+
+  handleChangeComplete = (color) => {
+    this.setState({ ...this.state, start: color.hex  });
+  };
   
     render() {
       return (
         <CirclePicker 
-            colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
+            color={this.state.start}
+            colors={["#000000", "#e91e63", "#9c27b0", "#673ab7",
                      "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
             circleSize={45}
             circleSpacing={35}
             width={{width: "100%"}}
-            onChangeComplete={ this.handleChangeComplete }>
+            onChangeComplete={ this.handleChangeComplete }
+            >
         </CirclePicker>
       );
     }

@@ -44,14 +44,16 @@ function Legal() {
             <p><strong>Offrendo un caffè agli sviluppatori con una donazione.</strong> Non ci aspettiamo che il nostro tempo venga ripagato (non è il nostro obiettivo) ma è un gesto che a noi <strong>fa super piacere </strong>(anche perche i server sono da pagare)</p>
             <p>Oppure se come noi non hai un soldo, puoi <strong>condividere il progetto</strong> a qualcun altr* (cosi magari il caffe lo offre ad entrambi)</p>
           </div>
-        </div>
-      
-        <div className="caffeButton">
+        
+      <footer className="footer1">
+        <button className="caffeButton">
             <Link to='/page1' className="caffe">Offrici un caffè</Link>
-        </div>
+        </button>
         <div>
           <Link to='/page1' className="backHome">Torna alla home</Link>
         </div>
+      </footer>
+      </div>
     </>
     )
   }

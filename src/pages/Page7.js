@@ -61,9 +61,9 @@ function Page7() {
 
                     </div>
 
-                    <div className="caffeButtonConc">
+                    <button className="caffeButtonConc">
                         <Link to='/page1'className="caffe">Offrici un caffè</Link>
-                    </div>
+                    </button>
                     <div>
                         <Link to='/page1'className="backHomeConc">Torna alla home</Link>
                     </div>
