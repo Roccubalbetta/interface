@@ -2,6 +2,7 @@ import Main from './Main';
 import {BrowserRouter} from 'react-router-dom';
 import { positions, Provider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

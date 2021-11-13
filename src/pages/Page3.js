@@ -1,11 +1,13 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import qr from '../immagini/Qr.png';
 import avanti from "../immagini/Avanti.svg";
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import fasi from "../immagini/Group 7.svg";
 import './Pages.css';
 
 import { CirclePicker } from "react-color";
+import {defaultQrOptions} from "../utilities";
+import QRCodeStyling from "qr-code-styling";
 
 
 function Page3() {
@@ -15,7 +17,37 @@ function Page3() {
     root.style.setProperty('--green', "#FFFFFF");
 
     window.scrollTo(0, 0);
-    
+
+    let defaultOptions;
+
+    const location = useLocation()
+
+    if (location.state && location.state.qrOptions){
+        defaultOptions = location.state.qrOptions
+    } else {
+        defaultOptions = defaultQrOptions
+    }
+
+    const [qrOptions, setQrOptions] = useState(defaultOptions)
+
+    const [qrCode] = useState(new QRCodeStyling(qrOptions))
+
+    useEffect(() => {
+        qrCode.append(document.getElementById("qrPanel"))
+    })
+
+    useEffect(() => {
+        qrCode.update(qrOptions)
+    },[qrCode, qrOptions])
+
+    const color1Selected = (color, event) => {
+        //TODO
+    }
+
+    const color2Selected = (color, event) => {
+        //TODO
+    }
+
     return (
         <div>
              <div className="fase">
@@ -24,7 +56,7 @@ function Page3() {
 
             <div className="qrframe">
                 <div className="frame">
-                    <img src={qr}  className="qr"/>
+                    <svg id={"qrPanel"} viewBox="0 0 1000 1000" style={{width: 200}}/>
                 </div>
             </div>
 
@@ -47,7 +79,9 @@ function Page3() {
                                  "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
                         circleSize={45}
                         circleSpacing={35}
-                        width={{width: "100%"}}>
+                        width={{width: "100%"}}
+                        onChangeComplete={color1Selected}
+                    >
                     </CirclePicker>
                     </div>
                 </div>
@@ -62,7 +96,9 @@ function Page3() {
                                  "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
                         circleSize={45}
                         circleSpacing={35}
-                        width={{width: "100%"}}>
+                        width={{width: "100%"}}
+                        onChangeComplete={color2Selected}
+                    >
                     </CirclePicker>
                     </div>
                 </div>
@@ -75,7 +111,7 @@ function Page3() {
                         </div>
                     </Link>
                     
-                    <Link to ="/page25">
+                    <Link to ={{pathname : "/page25", state : {qrOptions}}}>
                         <div className="buttonIndietro">
                             <img src={avanti} className="indietro" />
                         </div>

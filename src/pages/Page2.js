@@ -12,6 +12,7 @@ import Camera from 'react-html5-camera-photo';
 import 'react-html5-camera-photo/build/css/index.css';
 import { useAlert } from "react-alert";
 import QRCodeStyling from "qr-code-styling";
+import {defaultQrOptions} from "../utilities";
 
 
 
@@ -25,49 +26,19 @@ export default function Page2() {
 
     window.scrollTo(0, 0);
 
-    const [show, setShow] = useState(false);
-
     const [qrFound, setFound] = useState(false)
 
-    const [qrOptions, setQrOptions] = useState(
-        {
-            data : "https://master.d2g7knv9wv4iw9.amplifyapp.com/",
-            width: 1000,
-            height: 1000,
-            type: "svg",
-            margin: 2,
-            image: "",
-            dotsOptions: {
-                color: "#000000",
-                type: "square",
-                gradient : ""
-            },
-            imageOptions: {
-                crossOrigin: "anonymous",
-                hideBackgroundDots: false,
-                imageSize : 0.3,
-                margin: 5
-            },
-            cornersSquareOptions: {
-                color: "#000000",
-                type: "square",
-                gradient : ""
-            },
-            cornersDotOptions: {
-                color: "#000000",
-                type: "square",
-                gradient : ""
-            },
-        },
-    )
+    const [qrOptions, setQrOptions] = useState(defaultQrOptions)
 
-    const [qrCode, setQrcode] = useState(new QRCodeStyling(qrOptions))
+    const [qrCode] = useState(new QRCodeStyling(qrOptions))
+
     useEffect(() => {
-        qrCode.update(qrOptions)
+        qrCode.append(document.getElementById("qrPanel"))
     })
 
-    qrCode.append(document.getElementById("qrPanel"))
-    qrCode.update(qrOptions)
+    useEffect(() => {
+        qrCode.update(qrOptions)
+    }, [qrCode, qrOptions])
 
     const [cameraIsVisible, setCameraVisibility] = useState(false);
 
@@ -147,7 +118,7 @@ export default function Page2() {
                 </div>
                 <div className="loadOptions">
                     <div className="loadsx" onClick={onCameraInputClick}>
-                        <div onClick={() => setShow((s) => true)}>
+                        <div>
                             <img src={camera} className="icon" alt={"camera icon"}/>
                         </div>
                         <div className="loadLabel">
@@ -155,7 +126,7 @@ export default function Page2() {
                         </div>
                     </div>
                     <div className="loaddx" onClick={onImageSelectorClick}>
-                        <div onClick={() => setShow((s) => true)}>
+                        <div>
                             <img src={image} className="icon" alt={"gallery icon"}/>
                         </div>
                         <div className="loadLabel">
@@ -171,14 +142,14 @@ export default function Page2() {
                 </div>
                 <footer>
                     <div className="pagineOptions">
-                        <Link to={{pathname : '/page25' , state: { qrOptions : qrOptions }}} >
-                            <div className="buttonAvanti"  style={{ display: show ? "block" : "none" }}>
+                        <Link to={{pathname : '/page25' , state: {qrOptions}}} >
+                            <div className="buttonAvanti"  style={{display : !qrFound ? "none" : "block"}}>
                                 <img src={avanti} className="avanti" />
                             </div>
                         </Link>
 
                         <Link to ="/page1" >
-                            <div className="buttonIndietro" onClick={() => setShow((s) => false)}>
+                            <div className="buttonIndietro">
                                 <img src={avanti} className="indietro" />
                             </div>
                         </Link>
