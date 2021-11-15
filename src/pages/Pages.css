@@ -4,26 +4,38 @@
 
 body{
   background-color: var(--green);
+  flex: 1;
 }
+
 
 .fase{
   
-  position: absolute;
-  top: 45px;
+  padding-top: 45px;
   width: 267px;
   height: auto;
   left: 0; 
   right: 0; 
   margin-left: auto; 
   margin-right: auto;
-  padding: 0 0 0 0;
   text-align: center;
+}
+
+.testoIniziale{
+
+  padding-top: 125px;
+    width: 295px;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    
+
 }
 
 .title {
 
-  position: absolute;
-  width: 280px;
+  width: 270px;
   height: 200px;
 
   font-family: Roboto;
@@ -32,17 +44,18 @@ body{
   font-size: 48px;
   line-height: 56px;
   text-align: left;
-  top: 120px;
-  padding: 0 65px;
   margin: 0;
+  margin-bottom: 40px;
+  padding-left: 20px;
   
   color: #1D3557;
   
 }
 
 .descr {
-  position: absolute;
-  width: 280px;
+
+
+  width: 270px;
   height: 260px;
 
   font-family: Roboto;
@@ -51,34 +64,28 @@ body{
   font-size: 24px;
   line-height: 28px;
   text-align: left;
-  top: 380px;
-  padding: 0 65px;
   margin: 0;
+  padding-left: 20px;
 
   color: #1D3557;
 }
 
 .footer {
 
-  position: absolute;
   width: 280px;
   height: 127px;
 
   text-align: center;
   padding-bottom: 80px;
-  padding: 0 65px;
-  padding-bottom: 100px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  top: 635px;
 
 }
 
 .iniziaButton {
 
-  position: absolute;
   width: 121px;
   height: 52px;
   left: 0; 
@@ -90,16 +97,15 @@ body{
   background: #A8DADC;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 26px;
+  border: none;
 
       
 }
 
-  .inizia {
+.inizia {
 
-    position: absolute;
     width: 66px;
     height: 28px;
-    top: 12px;
     left: 0;
     right: 0;
     margin-left: auto; 
@@ -113,17 +119,19 @@ body{
     text-align: center;
     text-decoration: none;
     color: #1D3557;
+    margin-top: 0;
+    margin-bottom: 0;
 
-  }
+}
 
-  .tranqui {
-    position: relative;
+.tranqui {
+
     width: 150px;
-    top: 37px;
     left: 0;
     right: 0;
     margin-left: auto; 
     margin-right: auto;
+    margin-top: 30px;
     
     font-family: Roboto;
     font-style: italic;
@@ -131,29 +139,26 @@ body{
     font-size: 13px;
     line-height: 15px;
     text-align: center;
-    top: 90px;
     
     color: #1D3557;
     
-  } 
+} 
 
-  .testolegale{
+.testolegale{
 
-    position: absolute;
-    top: 100px;
+    padding-top: 100px;
     width: 295px;
-    height: 1180px;
+    height: 100%;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 10px;
+    
 
-  }
+}
 
   .sub1 {
 
-    position: static;
     width: 290px;
     height: auto;
 
@@ -168,7 +173,6 @@ body{
 
   .sub2 {
 
-    position: static;
     width: 290px;
     height: auto;
 
@@ -184,7 +188,6 @@ body{
 
   .sub3 {
 
-    position: static;
     width: 290px;
     height: auto;
 
@@ -199,55 +202,53 @@ body{
 
   }
 
+  .footer1 {
+
+    width: 280px;
+    height: 127px;
+  
+    text-align: center;
+    padding-bottom: 40px;
+    left: 0;
+    right: 0;
+    margin-top: 50px;
+  
+  }
+
   .caffeButton {
 
-  position: absolute;
   width: 231px;
   height: 52px;
-  top: 1315px;
   left: 0;
   right: 0;
-  margin: 50px auto 0 auto;
+  margin-left: auto; 
+  margin-right: auto;
+  margin-bottom: 25px;
 
   background: #A8DADC;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 26px;
+  border: none;
 }
 
 .backHome {
 
-  position: absolute;
   width: 130px;
   height: 26px;
-  left: 0;
-  right: 0;
-  top: 1415px;
-  margin: 30px auto 0 auto;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  text-align: center;
   text-decoration-line: underline;
-  padding-bottom: 35px;
 
   color: #1D3557;
 }
 
-
 .caffe {
 
-    position: absolute;
     width: 181px;
     height: 28px;
-    top:  12px;
-    left: 0;
-    right: 0;
-    margin-left: auto; 
-    margin-right: auto;
-
 
     font-family: Roboto;
     font-style: normal;
@@ -255,7 +256,8 @@ body{
     font-size: 24px;
     line-height: 28px;
     text-decoration: none;
-    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
 
     color: #1D3557;
 
@@ -263,23 +265,20 @@ body{
 
 .qrframe {
 
-    position: relative;
+
     width: 280px;
     height: 207px;
   
     text-align: center;
-    padding: 0 0 0 0;
+    padding-top: 60px;
     left: 0; 
     right: 0; 
     margin-left: auto; 
     margin-right: auto;
-    top: 125px;
-  
 }
 
 .frame {
 
-  position: relative;
   width: 207px;
   height: 207px;
   left: 0;
@@ -293,11 +292,11 @@ body{
 
 }
 
-.panel {
+.panel4{
   
-  position: absolute;
+  margin-top: 70px;
   width: 100%;
-  height: 450px;
+  height: 455px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -312,16 +311,15 @@ body{
 }
 
 .panel2{
-  
-  position: absolute;
+
+  margin-top: 70px;
   width: 100%;
-  height: 400px;
+  height: 385px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
-  top: 420px;
 
   background: #F1FAEE;
   box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
@@ -331,7 +329,7 @@ body{
 
 .panel25{
 
-  position: absolute;
+  margin-top: 70px;
   width: 100%;
   height: 810px;
   left: 0;
@@ -339,7 +337,6 @@ body{
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
-  top: 420px;
 
   background: #F1FAEE;
   box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
@@ -348,15 +345,14 @@ body{
 
 .panel3 {
   
-  position: absolute;
+  margin-top: 70px;
   width: 100%;
-  height: 605px;
+  height: 610px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
-  top: 420px;
 
   background: #F1FAEE;
   box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
@@ -366,63 +362,76 @@ body{
 
 .panel5 {
   
-  position: absolute;
+  margin-top: 70px;
   width: 100%;
-  height: 820px;
+  height: 840px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
-  top: 420px;
+
 
   background: #F1FAEE;
   box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
   border-radius: 30px 30px 0 0;
   
+}
+
+.panel6 {
+
+  margin-top: 70px;
+  width: 100%;
+  height: 465px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+
+  background: #F1FAEE;
+  box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 30px 30px 0 0;
 }
 
 .panel7{
 
-  position: absolute;
+  margin-top: 70px;
   width: 100%;
-  height: 570px;
+  height: 600px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
-  top: 420px;
+  text-align: center;
 
   background: #F1FAEE;
   box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.25);
   border-radius: 30px 30px 0 0;
 }
 
-
 .qr {
   
-  position: absolute;
   width: 144px;
   height: 144px;
   left: 0;
   right: 0;
-  bottom: 30px;
+  padding-top: 32px;
+  margin-top: 0;
+  margin-bottom: 0;
   margin-left: auto;
   margin-right: auto;
   opacity: 0.6;
 }
 
-
 .guide {
 
-  position: absolute;
   width: 100%;
   height: 30px;
-  top: 40px;
+  padding-top: 40px;
   left: 0;
   right: 0;
-  bottom: 327px;
   margin-left: auto;
   margin-right: auto;
 
@@ -439,10 +448,9 @@ body{
 
 .loadsx {
 
-  position: absolute;
   width: 130px;
   height: 130px;
-  left: 0;
+  text-align: center;
 
   border: 1.5px solid #457B9D;
   box-sizing: border-box;
@@ -453,10 +461,10 @@ body{
 
 .loaddx {
 
-  position: absolute;
   width: 130px;
   height: 130px;
-  right: 0;
+  margin-left: 35px;
+  text-align: center;
 
   border: 1.5px solid #457B9D;
   box-sizing: border-box;
@@ -467,8 +475,7 @@ body{
 
 .loadOptions {
 
-  position: absolute;
-  top: 110px;
+  padding-top: 45px;
   width: 295px;
   height: 130px;
   left: 0;
@@ -479,24 +486,20 @@ body{
 }
 
 .icon {
-  position: absolute;
+
   width: 73px;
   height: 73px;
-  left: 0;
-  right: 0;
-  bottom: 43px;
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
 
 }
 
 .loadLabel {
-  position: absolute;
+ 
   width: 130px;
   height: 26px;
-  left: 0;
-  right: 0;
-  bottom: 7px;
+  padding-top: 5px;
   margin-left: auto;
   margin-right: auto;
 
@@ -505,7 +508,6 @@ body{
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  text-align: center;
 
   color: #1D3557;
 
@@ -513,12 +515,8 @@ body{
 
 .pagineOptions {
 
-  position: absolute;
   width: 135px;
   height: 130px;
-  left: 0;
-  right: 0;
-  bottom: 0;
   margin-left: auto;
   margin-right: auto;
 
@@ -526,12 +524,10 @@ body{
 
 .pagine3Options {
 
-  position: absolute;
   width: 135px;
   height: 130px;
   left: 0;
   right: 0;
-  top: 475px;
   margin-left: auto;
   margin-right: auto;
 
@@ -539,24 +535,34 @@ body{
 
 .pagine25Options{
 
-  position: absolute;
   width: 135px;
   height: 130px;
   left: 0;
   right: 0;
-  top: 680px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.pagine4Options{
+
+  width: 135px;
+  height: 130px;
+  margin-top: 70px;
+  left: 0;
+  right: 0;
   margin-left: auto;
   margin-right: auto;
 
 }
 
 .buttonAvanti {
-  position: absolute;
+
   width: 50px;
   height: 50px;
-  right: 0;
-  bottom: 45px;
+  margin-top: 50px;
   margin-left: auto;
+  text-align: center;
   background: #A8DADC;
   border: 1px solid #457B9D;
   box-sizing: border-box;
@@ -566,11 +572,11 @@ body{
 }
 
 .buttonIndietro {
-  position: absolute;
+
   width: 50px;
   height: 50px;
-  left: 0;
-  bottom: 45px;
+  margin-top: 50px;
+  text-align: center;
   margin-right: auto;
   background: #A8DADC;
   border: 1px solid #457B9D;
@@ -580,25 +586,21 @@ body{
 }
 
 .avanti {
-  position: absolute;
+
   width: 46px;
   height: 46px;
   left: 0;
   right: 0;
-  bottom: 0;
-  margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
 }
 
 .indietro {
-  position: absolute;
+
   width: 46px;
   height: 46px;
   left: 0;
   right: 0;
-  bottom: 0;
-  margin-bottom: auto;
   margin-left: auto;
   margin-right: auto;
 
@@ -606,10 +608,10 @@ body{
   transform: scaleX(-1);
 }
 
+
 .colorframe{
 
-  position: absolute;
-  top: 100px;
+  padding-top: 30px;
   width: 285px;
   height: 170px;
   left: 0;
@@ -619,9 +621,10 @@ body{
 }
 
 .colore {
-  position: absolute;
+
   width: auto;
   height: 36px;
+  padding-bottom: 10px;
 
   font-family: Roboto;
   font-style: normal;
@@ -635,8 +638,6 @@ body{
 
 .colortable{
 
-  position: absolute;
-  top: 45px;
   width: 100%;
   height: 120px;
   left: 0;
@@ -646,7 +647,188 @@ body{
 
 }
 
-.colore1{
+.scelta1{
+
+  width: 45px;
+  height: 45px;
+  margin-right: 34px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #FFFFFF;
+  border: none;
+
+}
+
+.scelta1:focus {
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
+.scelta2{
+
+  width: 45px;
+  height: 45px;
+  margin-right: 34px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #FFFFFF;
+
+  border: none;
+}
+
+.scelta2:focus{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
+.scelta3{
+  
+  width: 45px;
+  height: 45px;
+  margin-right: 34px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #FFFFFF;
+  border: none;
+}
+
+.scelta3:focus{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
+.scelta4{
+  
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  float: left;
+
+  background: #FFFFFF;
+  border: none;
+}
+
+.scelta4:focus{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
+.scelta5{
+
+  width: 45px;
+  height: 45px;
+  margin-right: 34px;
+  margin-top: 27px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #FFFFFF;
+  border: none;
+}
+
+.scelta5:focus{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
+.scelta6{
+
+  width: 45px;
+  height: 45px;
+  margin-right: 34px;
+  margin-top: 27px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #FFFFFF;
+  border: none;
+}
+
+.scelta6:focus{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
+.scelta7{
+  
+  width: 45px;
+  height: 45px;
+  margin-right: 34px;
+  margin-top: 27px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #FFFFFF;
+  border: none;
+}
+
+.scelta7:focus{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
+.scelta8{
+  
+  width: 45px;
+  height: 45px;
+  margin-top: 27px;
+  border-radius: 50%;
+
+  float: left;
+
+  background: #FFFFFF;
+  border: none;
+}
+
+.scelta8:focus{
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+  border: none;
+}
+
+.gradientframe{
+
+  padding-top: 30px;
+  width: 285px;
+  height: 170px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+
+}
+
+
+.gradienttable{
+
+  
+  width: 100%;
+  height: 120px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+/*
+.gradiente1{
   position: absolute;
   width: 45px;
   height: 45px;
@@ -657,15 +839,17 @@ body{
   float: left;
 
   background: #000000;
+  border: none;
 
 }
 
-.colore1:hover {
+.gradiente1:focus {
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
 }
 
-.colore2{
+.gradiente2{
   position: absolute;
   width: 45px;
   height: 45px;
@@ -676,14 +860,16 @@ body{
   float: left;
 
   background: #ff0000;
+  border: none;
 }
 
-.colore2:hover{
+.gradiente2:hover{
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
 }
 
-.colore3{
+.gradiente3{
   position: absolute;
   width: 45px;
   height: 45px;
@@ -694,14 +880,16 @@ body{
   float: left;
 
   background: #0066ff;
+  border: none;
 }
 
-.colore3:hover{
+.gradiente3:hover{
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
 }
 
-.colore4{
+.gradiente4{
   position: absolute;
   width: 45px;
   height: 45px;
@@ -712,14 +900,16 @@ body{
   float: left;
 
   background: #ff00f2;
+  border: none;
 }
 
-.colore4:hover{
+.gradiente4:hover{
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
 }
 
-.colore5{
+.gradiente5{
   position: absolute;
   width: 45px;
   height: 45px;
@@ -730,14 +920,16 @@ body{
   float: left;
 
   background: #00ff62;
+  border: none;
 }
 
-.colore5:hover{
+.gradiente5:hover{
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
 }
 
-.colore6{
+.gradiente6{
   position: absolute;
   width: 45px;
   height: 45px;
@@ -748,14 +940,16 @@ body{
   float: left;
 
   background: #00ccff;
+  border: none;
 }
 
-.colore6:hover{
+.gradiente6:hover{
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
 }
 
-.colore7{
+.gradiente7{
   position: relative;
   width: 45px;
   height: 45px;
@@ -766,14 +960,16 @@ body{
   float: left;
 
   background: #127456;
+  border: none;
 }
 
-.colore7:hover{
+.gradiente7:hover{
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
 }
 
-.colore8{
+.gradiente8{
   position: absolute;
   width: 45px;
   height: 45px;
@@ -784,30 +980,37 @@ body{
   float: left;
 
   background: #333333;
+  border: none;
 }
 
-.colore8:hover{
+.gradiente8:hover{
   outline: 3px solid #457B9D;
   outline-offset: 4px;
+  border: none;
+}*/
+
+
+.circle-picker {
+  width: 100%;
+
 }
 
-.gradientframe{
+.circle-picker > span {
+  height: 70px;
+}
 
-  position: absolute;
-  top: 305px;
-  width: 285px;
-  height: 170px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-
+.circle-picker > span:nth-child(4) {
+  width: 45px;
+  height: 60px;
+}
+.circle-picker > span:nth-child(8) {
+  width: 45px;
+  height: 60px;
 }
 
 .dotframe {
 
-  position: absolute;
-  top: 510px;
+  padding-top: 30px;
   width: 285px;
   height: 170px;
   left: 0;
@@ -819,7 +1022,6 @@ body{
 
 .loadlogo {
 
-  position: absolute;
   width: 130px;
   height: 130px;
   left: 0;
@@ -829,14 +1031,15 @@ body{
   border: 1.5px solid #457B9D;
   box-sizing: border-box;
   border-radius: 20px;
+  text-align: center;
 }
 
 .logo {
-  position: absolute;
+
   width: 73px;
   height: 73px;
   left: 159px;
-  top: 12px;
+  padding-top: 12px;
   left: 0;
   right: 0;
   bottom: 0px;
@@ -846,14 +1049,13 @@ body{
 
 .rimuovilogo{
 
-  position: absolute;
   width: 130px;
   height: 26px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  top: 150px;
+  padding-top: 25px;
 
   font-family: Roboto;
   font-style: normal;
@@ -868,10 +1070,10 @@ color: #1D3557;
 
 .scrittaframe{
 
-  position: absolute;
-  top: 300px;
+
+  padding-top: 30px;
   width: 285px;
-  height: 110px;
+  height: 120px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -881,10 +1083,8 @@ color: #1D3557;
 
 .text {
 
-  position: absolute;
   width: 90%;
   height: 40px;
-  top: 35px;
 
   border: 2px solid #457B9D;
   box-sizing: border-box;
@@ -893,10 +1093,8 @@ color: #1D3557;
 
 .fontframe{
 
-  position: absolute;
-  top: 396px;
   width: 285px;
-  height: 170px;
+  height: 120px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -906,10 +1104,8 @@ color: #1D3557;
 
 .tendina{
   
-  position: absolute;
   width: 190px;
   height: 40px;
-  top: 35px;
 
   border: 2px solid #457B9D;
   box-sizing: border-box;
@@ -918,8 +1114,6 @@ color: #1D3557;
 
 .coloreScrittaFrame{
 
-  position: absolute;
-  top: 490px;
   width: 285px;
   height: 160px;
   left: 0;
@@ -930,12 +1124,21 @@ color: #1D3557;
 
 .pagine5Options{
 
-  position: absolute;
   width: 135px;
   height: 130px;
   left: 0;
   right: 0;
-  top: 690px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.consiglioFrame {
+  
+  width: 295px;
+  height: 80px;
+  left: 0;
+  right: 0;
   margin-left: auto;
   margin-right: auto;
 
@@ -943,19 +1146,15 @@ color: #1D3557;
 
 .consiglio{
 
-  position: absolute;
   width: 150px;
   height: 36px;
-  left: -120px;
-  right: 0;
-  top: 270px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 40px;
+  padding-left: 5px;
 
-  font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-style: normal;
+  
+  font-family: "Nanum Pen Script";
   font-weight: normal;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 17px;
   text-align: center;
 
@@ -966,8 +1165,7 @@ color: #1D3557;
 
 .loadconclusione{
 
-  position: absolute;
-  top: 90px;
+  padding-top: 20px;
   width: 265px;
   height: 255px;
   left: 0;
@@ -977,7 +1175,7 @@ color: #1D3557;
 }
 
 .conlusione{
-  position: absolute;
+  
   width: 268px;
   height: 299px;
 
@@ -992,12 +1190,10 @@ color: #1D3557;
 
 .subConc{
 
-  position: static;
     width: 268px;
     height: auto;
     margin: 7px 0 7px 0;
     padding: 7px 0 8px 0;
-    top: 106px;
 
     font-family: Roboto;
     font-style: normal;
@@ -1010,7 +1206,7 @@ color: #1D3557;
 }
 
 .testoConc{
-  position: static;
+
   width: 268px;
   height: auto;
 
@@ -1025,28 +1221,24 @@ color: #1D3557;
 
 .caffeButtonConc {
 
-  position: absolute;
   width: 231px;
   height: 52px;
-  top: 290px;
   left: 0;
   right: 0;
-  margin: 50px auto 0 auto;
+  margin: 50px auto 25px auto;
 
   background: #A8DADC;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 26px;
+  border: none;
 }
 
 .backHomeConc {
 
-  position: absolute;
   width: 130px;
   height: 26px;
   left: 0;
   right: 0;
-  top: 390px;
-  margin: 30px auto 0 auto;
 
   font-family: Roboto;
   font-style: normal;

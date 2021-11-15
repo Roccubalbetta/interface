@@ -5,6 +5,60 @@ import {Link} from 'react-router-dom';
 import fasi from "../immagini/Group 7.svg";
 import './Pages.css';
 
+import { CirclePicker } from "react-color";
+
+class Colore1 extends React.Component {
+
+    state = {
+      start: "#000000",
+    };
+  
+    handleChangeComplete = (color) => {
+      this.setState({ ...this.state, start: color.hex  });
+    };
+    
+      render() {
+        return (
+          <CirclePicker 
+              color={this.state.start}
+              colors={["#000000", "#e91e63", "#9c27b0", "#673ab7",
+                       "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+              circleSize={45}
+              circleSpacing={35}
+              width={{width: "100%"}}
+              onChangeComplete={ this.handleChangeComplete }
+              >
+          </CirclePicker>
+        );
+      }
+    }
+  
+    class Colore2 extends React.Component {
+    
+      state = {
+        start: "#000000",
+      };
+    
+      handleChangeComplete = (color) => {
+        this.setState({ ...this.state, start: color.hex  });
+      };
+      
+        render() {
+          return (
+            <CirclePicker 
+                color={this.state.start}
+                colors={["#000000", "#e91e63", "#9c27b0", "#673ab7",
+                         "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+                circleSize={45}
+                circleSpacing={35}
+                width={{width: "100%"}}
+                onChangeComplete={ this.handleChangeComplete }
+                >
+            </CirclePicker>
+          );
+        }
+    }
+
 
 function Page3() {
 
@@ -40,14 +94,7 @@ function Page3() {
                     </div>
 
                     <div className="colortable">
-                    <div className="colore1"></div>
-                    <div className="colore2"></div>
-                    <div className="colore3"></div>
-                    <div className="colore4"></div>
-                    <div className="colore5"></div>
-                    <div className="colore6"></div>
-                    <div className="colore7"></div>
-                    <div className="colore8"></div>
+                    <Colore1/>
                     </div>
                 </div>
 
@@ -55,15 +102,8 @@ function Page3() {
                     <div className="colore">
                         Gradiente
                     </div>
-                    <div className="colortable">
-                    <div className="colore1"></div>
-                    <div className="colore2"></div>
-                    <div className="colore3"></div>
-                    <div className="colore4"></div>
-                    <div className="colore5"></div>
-                    <div className="colore6"></div>
-                    <div className="colore7"></div>
-                    <div className="colore8"></div>
+                    <div className="gradienttable">
+                    <Colore2 />
                     </div>
                 </div>
 

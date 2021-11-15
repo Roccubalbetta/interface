@@ -28,7 +28,7 @@ function Page4() {
                 </div>
             </div>
 
-            <div className="panel">
+            <div className="panel4">
                 <div className="guideframe">
                     <div className="guide">
                         Aggiungi un logo <small>(opzionale)</small>
@@ -49,7 +49,7 @@ function Page4() {
                     </div>
                 </div>
                 <footer>
-                <div className="pagineOptions">
+                <div className="pagine4Options">
                     <Link to="/page5">
                         <div className="buttonAvanti">
                             <img src={avanti} className="avanti" />
