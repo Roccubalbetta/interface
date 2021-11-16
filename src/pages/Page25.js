@@ -3,87 +3,35 @@ import qr from '../immagini/Qr.png';
 import avanti from "../immagini/Avanti.svg";
 import {Link} from 'react-router-dom';
 import fasi from "../immagini/Group 6.svg";
+import squares from "../immagini/squares.png";
 import './Pages.css';
 
-import { CirclePicker } from "react-color";
+import { useState } from "react";
 
 
-class Colore1 extends React.Component {
+  function ImagePicker({onPick}) {
 
-  state = {
-    start: "#000000",
-  };
-
-  handleChangeComplete = (color) => {
-    this.setState({ ...this.state, start: color.hex  });
-  };
+    const images = ["squares", "#e91e63", "#9c27b0", "#673ab7",
+        "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]
   
-    render() {
-      return (
-        <CirclePicker 
-            color={this.state.start}
-            colors={["#000000", "#e91e63", "#9c27b0", "#673ab7",
-                     "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
-            circleSize={45}
-            circleSpacing={35}
-            width={{width: "100%"}}
-            onChangeComplete={ this.handleChangeComplete }
-            >
-        </CirclePicker>
-      );
-    }
-  }
-
-  class Colore2 extends React.Component {
+    const [image, setImage] = useState(0)
   
-    state = {
-      start: "#000000",
-    };
+    return (
+        <>
+        <div>
+            {/*{colors[color]}*/}
+        </div>
+        <div>
+            {images.map(( im , i )=> <div style={{background: "../immagini/squares.png"}} className={i == image? "squaresSelected":"squares" } onClick={ () => {
+                onPick(im);
+                setImage(i);
+            }}></div>)}
+        </div>
   
-    handleChangeComplete = (color) => {
-      this.setState({ ...this.state, start: color.hex  });
-    };
-    
-      render() {
-        return (
-          <CirclePicker 
-              color={this.state.start}
-              colors={["#000000", "#e91e63", "#9c27b0", "#673ab7",
-                       "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
-              circleSize={45}
-              circleSpacing={35}
-              width={{width: "100%"}}
-              onChangeComplete={ this.handleChangeComplete }
-              >
-          </CirclePicker>
-        );
-      }
-  }
-
-  class Colore3 extends React.Component {
+        </>
+    )
   
-   state = {
-    start: "#000000",
-  };
-
-  handleChangeComplete = (color) => {
-    this.setState({ ...this.state, start: color.hex  });
-  };
   
-    render() {
-      return (
-        <CirclePicker 
-            color={this.state.start}
-            colors={["#000000", "#e91e63", "#9c27b0", "#673ab7",
-                     "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
-            circleSize={45}
-            circleSpacing={35}
-            width={{width: "100%"}}
-            onChangeComplete={ this.handleChangeComplete }
-            >
-        </CirclePicker>
-      );
-    }
   }
 
 
@@ -121,7 +69,7 @@ function Page25() {
                     </div>
 
                     <div className="colortable">
-                    <Colore1 />
+                    <ImagePicker onPick={ (c) => console.log(c)} />
                     </div>
                 </div>
 
@@ -130,7 +78,7 @@ function Page25() {
                         Quadrati piccoli
                     </div>
                     <div className="colortable">
-                    <Colore2 />
+                    <ImagePicker onPick={ (c) => console.log(c)} />
                     </div>
                 </div>
 
@@ -139,7 +87,7 @@ function Page25() {
                         Quadrati piccoli
                     </div>
                     <div className="colortable">
-                    <Colore3 />
+                    <ImagePicker onPick={ (c) => console.log(c)} />
                     </div>
                 </div>
 

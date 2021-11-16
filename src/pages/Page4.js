@@ -51,13 +51,13 @@ function Page4() {
                 <footer>
                 <div className="pagine4Options">
                     <Link to="/page5">
-                        <div className="buttonAvanti">
+                        <div className="buttonAvanti4">
                             <img src={avanti} className="avanti" />
                         </div>
                     </Link>
                     
                     <Link to ="/page3">
-                        <div className="buttonIndietro">
+                        <div className="buttonIndietro4">
                             <img src={avanti} className="indietro" />
                         </div>
                     </Link>

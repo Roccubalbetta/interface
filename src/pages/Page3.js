@@ -4,6 +4,7 @@ import avanti from "../immagini/Avanti.svg";
 import {Link} from 'react-router-dom';
 import fasi from "../immagini/Group 7.svg";
 import './Pages.css';
+import { useState } from "react";
 
 import { CirclePicker } from "react-color";
 
@@ -31,9 +32,9 @@ class Colore1 extends React.Component {
           </CirclePicker>
         );
       }
-    }
+}
   
-    class Colore2 extends React.Component {
+class Colore2 extends React.Component {
     
       state = {
         start: "#000000",
@@ -57,7 +58,35 @@ class Colore1 extends React.Component {
             </CirclePicker>
           );
         }
-    }
+}
+
+function ColorPicker({onPick}) {
+
+  const colors = ["#000000", "#e91e63", "#9c27b0", "#673ab7",
+      "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]
+
+  const [color, setColor] = useState(0)
+
+  return (
+      <>
+      <div>
+          {/*{colors[color]}*/}
+      </div>
+      <div>
+          {colors.map(( c, i )=> <div style={{backgroundColor: c}} className={i == color? "selected":"scelta1" } onClick={ () => {
+              onPick(c);
+              setColor(i);
+          }}></div>)}
+      </div>
+
+      </>
+  )
+
+
+}
+
+
+
 
 
 function Page3() {
@@ -94,7 +123,7 @@ function Page3() {
                     </div>
 
                     <div className="colortable">
-                    <Colore1/>
+                    <ColorPicker onPick={ (c) => console.log(c)} />
                     </div>
                 </div>
 
@@ -103,7 +132,7 @@ function Page3() {
                         Gradiente
                     </div>
                     <div className="gradienttable">
-                    <Colore2 />
+                    <ColorPicker onPick={ (c) => console.log(c)} />
                     </div>
                 </div>
 

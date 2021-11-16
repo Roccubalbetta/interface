@@ -124,13 +124,13 @@ export default function Page2() {
                 </div>
                     <div className="pagineOptions">
                         <Link to="/page25">
-                            <div className="buttonAvanti"  style={{ display: show ? "block" : "none" }}>
+                            <div className="buttonAvanti2"  style={{ display: show ? "block" : "none" }}>
                                 <img src={avanti} className="avanti" />
                             </div>
                         </Link>
 
                         <Link to ="/page1">
-                            <div className="buttonIndietro" onClick={() => setShow((s) => false)}>
+                            <div className="buttonIndietro2" onClick={() => setShow((s) => false)}>
                                 <img src={avanti} className="indietro" />
                             </div>
                         </Link>

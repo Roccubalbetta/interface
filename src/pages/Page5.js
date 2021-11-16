@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import qr from '../immagini/Qr.png';
 import avanti from "../immagini/Avanti.svg";
 import fasi from "../immagini/Group 9.svg";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Pages.css';
 
 import { CirclePicker } from "react-color";
@@ -10,28 +10,56 @@ import { CirclePicker } from "react-color";
 class Colore1 extends React.Component {
 
     state = {
-      start: "#000000",
+        start: "#000000",
     };
-  
+
     handleChangeComplete = (color) => {
-      this.setState({ ...this.state, start: color.hex  });
+        this.setState({ ...this.state, start: color.hex });
     };
-    
-      render() {
+
+    render() {
         return (
-          <CirclePicker 
-              color={this.state.start}
-              colors={["#000000", "#e91e63", "#9c27b0", "#673ab7",
-                       "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
-              circleSize={45}
-              circleSpacing={35}
-              width={{width: "100%"}}
-              onChangeComplete={ this.handleChangeComplete }
-              >
-          </CirclePicker>
+            <CirclePicker
+                color={this.state.start}
+                colors={["#000000", "#e91e63", "#9c27b0", "#673ab7",
+                    "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+                circleSize={45}
+                circleSpacing={35}
+                width={{ width: "100%" }}
+                onChangeComplete={this.handleChangeComplete}
+            >
+            </CirclePicker>
         );
-      }
     }
+}
+
+
+
+
+function ColorPicker({onPick}) {
+
+    const colors = ["#000000", "#e91e63", "#9c27b0", "#673ab7",
+        "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]
+
+    const [color, setColor] = useState(0)
+
+    return (
+        <>
+        <div>
+            {/*colors[color]*/}
+        </div>
+        <div>
+            {colors.map(( c, i )=> <div style={{backgroundColor: c}} className={i == color? "selected":"scelta1" } onClick={ () => {
+                onPick(c);
+                setColor(i);
+            }}></div>)}
+        </div>
+
+        </>
+    )
+
+
+}
 
 
 function Page5() {
@@ -44,13 +72,14 @@ function Page5() {
 
     return (
         <>
-           <div className="fase">
-            <img src={fasi}  />
+
+            <div className="fase">
+                <img src={fasi} />
             </div>
 
             <div className="qrframe">
                 <div className="frame">
-                    <img src={qr}  className="qr"/>
+                    <img src={qr} className="qr" />
                 </div>
             </div>
 
@@ -65,14 +94,7 @@ function Page5() {
                         Cornice
                     </div>
                     <div className="colortable">
-                    <div className="scelta1"></div>
-                    <div className="scelta2"></div>
-                    <div className="scelta3"></div>
-                    <div className="scelta4"></div>
-                    <div className="scelta5"></div>
-                    <div className="scelta6"></div>
-                    <div className="scelta7"></div>
-                    <div className="scelta8"></div>
+                    <ColorPicker onPick={ (c) => console.log(c)} />
                     </div>
                 </div>
 
@@ -80,7 +102,7 @@ function Page5() {
                     <div className="colore">
                         Scritta
                     </div>
-                        <textarea className="text" cols="30" rows="2"></textarea>
+                    <textarea className="text" cols="30" rows="2"></textarea>
                 </div>
 
                 <div className="fontframe">
@@ -102,19 +124,19 @@ function Page5() {
                         Colore scritta
                     </div>
                     <div className="colortable">
-                    <Colore1 />
+                    <ColorPicker onPick={ (c) => console.log(c)} />
                     </div>
                 </div>
 
                 <div className="pagine5Options">
                     <Link to="/page6">
-                        <div className="buttonAvanti">
+                        <div className="buttonAvanti5">
                             <img src={avanti} className="avanti" />
                         </div>
                     </Link>
-                    
-                    <Link to ="/page4">
-                        <div className="buttonIndietro">
+
+                    <Link to="/page4">
+                        <div className="buttonIndietro5">
                             <img src={avanti} className="indietro" />
                         </div>
                     </Link>
@@ -122,6 +144,6 @@ function Page5() {
             </div>
         </>
     )
-  }
-  
+}
+
 export default Page5;

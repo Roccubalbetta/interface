@@ -61,13 +61,13 @@ function Page6() {
 
                 <div className="pagineOptions">
                     <Link to="/page7">
-                        <div className="buttonAvanti">
+                        <div className="buttonAvanti6">
                         <img src={avanti} className="avanti" />
                         </div>
                     </Link>
                     
                     <Link to ="/page5">
-                        <div className="buttonIndietro">
+                        <div className="buttonIndietro6">
                             <img src={avanti} className="indietro" />
                         </div>
                     </Link>
