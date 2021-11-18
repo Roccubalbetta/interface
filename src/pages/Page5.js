@@ -5,48 +5,42 @@ import fasi from "../immagini/Group 9.svg";
 import { Link } from 'react-router-dom';
 import './Pages.css';
 
-import { CirclePicker } from "react-color";
 
-class Colore1 extends React.Component {
+function CornerSquarePicker({onPick}) {
 
-    state = {
-        start: "#000000",
-    };
-
-    handleChangeComplete = (color) => {
-        this.setState({ ...this.state, start: color.hex });
-    };
-
-    render() {
-        return (
-            <CirclePicker
-                color={this.state.start}
-                colors={["#000000", "#e91e63", "#9c27b0", "#673ab7",
-                    "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
-                circleSize={45}
-                circleSpacing={35}
-                width={{ width: "100%" }}
-                onChangeComplete={this.handleChangeComplete}
-            >
-            </CirclePicker>
-        );
-    }
-}
-
-
-
-
-function ColorPicker({onPick}) {
-
-    const colors = ["#000000", "#e91e63", "#9c27b0", "#673ab7",
-        "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]
-
-    const [color, setColor] = useState(0)
-
+    const images = ["cornerSquare.png", "dot.png", "extraRound.png", "classyCorner.png"]
+  
+    const [image, setImage] = useState(0)
+  
     return (
         <>
         <div>
-            {/*colors[color]*/}
+            {/*{colors[color]}*/}
+        </div>
+        <div>
+            {images.map(( im , i )=> <div style={{ backgroundImage: `url(${im})`}} className={i == image? "CornerSquareSelected":"CornerSquare" } onClick={ () => {
+                onPick(i);
+                setImage(i);
+            }}></div>)}
+        </div>
+  
+        </>
+    )
+  
+  
+  }
+
+  function ColorPicker({onPick}) {
+
+    const colors = ["#000000", "#e91e63", "#9c27b0", "#673ab7",
+        "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]
+  
+    const [color, setColor] = useState(0)
+  
+    return (
+        <>
+        <div>
+            {/*{colors[color]}*/}
         </div>
         <div>
             {colors.map(( c, i )=> <div style={{backgroundColor: c}} className={i == color? "selected":"scelta1" } onClick={ () => {
@@ -54,12 +48,12 @@ function ColorPicker({onPick}) {
                 setColor(i);
             }}></div>)}
         </div>
-
+  
         </>
     )
-
-
-}
+  
+  
+  }
 
 
 function Page5() {
@@ -94,7 +88,7 @@ function Page5() {
                         Cornice
                     </div>
                     <div className="colortable">
-                    <ColorPicker onPick={ (c) => console.log(c)} />
+                    <CornerSquarePicker onPick={ (c) => console.log(c)}/>
                     </div>
                 </div>
 

@@ -22,7 +22,6 @@ body{
 
   background-color: #FFFFFF;
 
-  background-image: url('../immagini/squares.png');
   background-size: 35px;
   background-repeat: no-repeat;
   border: none;
@@ -44,8 +43,55 @@ body{
 
   background-color: #FFFFFF;
 
-  background-image: url('../immagini/squares.png');
-  background-size: 35px;
+    background-size: 35px;
+  background-repeat: no-repeat;
+  border: none;
+
+  outline: 3px solid #457B9D;
+  outline-offset: 4px;
+
+  
+
+
+}
+
+.CornerSquare{
+
+  width: 45px;
+  height: 45px;
+  margin-right: 34px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+
+  float: left;
+
+  background-position-x: center;
+  background-position-y: center;
+
+  background-color: #FFFFFF;
+
+  background-size: 30px;
+  background-repeat: no-repeat;
+  border: none;
+
+}
+
+.CornerSquareSelected{
+
+  width: 45px;
+  height: 45px;
+  margin-right: 34px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+
+  float: left;
+
+  background-position-x: center;
+  background-position-y: center;
+
+  background-color: #FFFFFF;
+
+    background-size: 30px;
   background-repeat: no-repeat;
   border: none;
 
@@ -70,19 +116,19 @@ body{
   text-align: center;
 }
 
-.squaresSelected:nth-child(4){
+.squaresSelected:nth-child(4), .CornerSquareSelected:nth-child(4) {
   margin-right: 0px;
 }
 
-.squaresSelected:nth-child(8){
+.squaresSelected:nth-child(8), .CornerSquareSelected:nth-child(8){
   margin-right: 0px;
 }
 
-.squares:nth-child(4){
+.squares:nth-child(4), .CornerSquare:nth-child(4){
   margin-right: 0px;
 }
 
-.squares:nth-child(8){
+.squares:nth-child(8), .CornerSquare:nth-child(8){
   margin-right: 0px;
 }
 
@@ -362,7 +408,7 @@ body{
   
   margin-top: 70px;
   width: 100%;
-  height: 455px;
+  height: 485px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -380,7 +426,7 @@ body{
 
   margin-top: 70px;
   width: 100%;
-  height: 400px;
+  height: 420px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -413,7 +459,7 @@ body{
   
   margin-top: 70px;
   width: 100%;
-  height: 610px;
+  height: 635px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -430,7 +476,7 @@ body{
   
   margin-top: 70px;
   width: 100%;
-  height: 850px;
+  height: 875px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -448,7 +494,7 @@ body{
 
   margin-top: 70px;
   width: 100%;
-  height: 465px;
+  height: 490px;
   left: 0;
   right: 0;
   margin-left: auto;

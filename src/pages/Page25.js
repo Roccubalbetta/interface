@@ -3,16 +3,14 @@ import qr from '../immagini/Qr.png';
 import avanti from "../immagini/Avanti.svg";
 import {Link} from 'react-router-dom';
 import fasi from "../immagini/Group 6.svg";
-import squares from "../immagini/squares.png";
 import './Pages.css';
 
 import { useState } from "react";
 
 
-  function ImagePicker({onPick}) {
+  function DotPicker({onPick}) {
 
-    const images = ["squares", "#e91e63", "#9c27b0", "#673ab7",
-        "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]
+    const images = ["squares.png", "extraRounded.png", "dots.png", "rounded.png", "classy.png", "classyRounded.png"]
   
     const [image, setImage] = useState(0)
   
@@ -22,8 +20,56 @@ import { useState } from "react";
             {/*{colors[color]}*/}
         </div>
         <div>
-            {images.map(( im , i )=> <div style={{background: "../immagini/squares.png"}} className={i == image? "squaresSelected":"squares" } onClick={ () => {
-                onPick(im);
+            {images.map(( im , i )=> <div style={{ backgroundImage: `url(${im})`}} className={i == image? "squaresSelected":"squares" } onClick={ () => {
+                onPick(i);
+                setImage(i);
+            }}></div>)}
+        </div>
+  
+        </>
+    )
+  
+  
+  }
+
+  function CornerSquarePicker({onPick}) {
+
+    const images = ["cornerSquare.png", "dot.png", "extraRound.png", "classyCorner.png"]
+  
+    const [image, setImage] = useState(0)
+  
+    return (
+        <>
+        <div>
+            {/*{colors[color]}*/}
+        </div>
+        <div>
+            {images.map(( im , i )=> <div style={{ backgroundImage: `url(${im})`}} className={i == image? "CornerSquareSelected":"CornerSquare" } onClick={ () => {
+                onPick(i);
+                setImage(i);
+            }}></div>)}
+        </div>
+  
+        </>
+    )
+  
+  
+  }
+
+  function CornerDotPicker({onPick}) {
+
+    const images = ["squareCornerDot.png", "cornerDot.png", "classyCornerDot.png"]
+  
+    const [image, setImage] = useState(0)
+  
+    return (
+        <>
+        <div>
+            {/*{colors[color]}*/}
+        </div>
+        <div>
+            {images.map(( im , i )=> <div style={{ backgroundImage: `url(${im})`}} className={i == image? "CornerSquareSelected":"CornerSquare" } onClick={ () => {
+                onPick(i);
                 setImage(i);
             }}></div>)}
         </div>
@@ -69,25 +115,25 @@ function Page25() {
                     </div>
 
                     <div className="colortable">
-                    <ImagePicker onPick={ (c) => console.log(c)} />
+                    <DotPicker onPick={ (c) => console.log(c)} />
                     </div>
                 </div>
 
                 <div className="gradientframe">
                     <div className="colore">
-                        Quadrati piccoli
+                        Cornice Quadrati Grandi
                     </div>
                     <div className="colortable">
-                    <ImagePicker onPick={ (c) => console.log(c)} />
+                    <CornerSquarePicker onPick={ (c) => console.log(c)} />
                     </div>
                 </div>
 
                 <div className="dotframe">
                     <div className="colore">
-                        Quadrati piccoli
+                    Cornice Quadrati Piccoli
                     </div>
                     <div className="colortable">
-                    <ImagePicker onPick={ (c) => console.log(c)} />
+                    <CornerDotPicker onPick={ (c) => console.log(c)} />
                     </div>
                 </div>
 
