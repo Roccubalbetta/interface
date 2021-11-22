@@ -4,7 +4,7 @@ import camera from "../immagini/Camerasvg.svg";
 import image from "../immagini/Image.svg";
 import avanti from "../immagini/Avanti.svg";
 import fasi from "../immagini/Group 5.svg";
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import './Pages.css';
 import jsQR from "jsqr";
 import {get} from '@andreekeberg/imagedata'
@@ -13,6 +13,8 @@ import 'react-html5-camera-photo/build/css/index.css';
 import { useAlert } from "react-alert";
 import QRCodeStyling from "qr-code-styling";
 import {defaultQrOptions} from "../utilities";
+import {useDispatch, useSelector} from "react-redux";
+import {changeData} from "../features/qrCode/qrCodeOptions";
 
 
 
@@ -26,14 +28,17 @@ export default function Page2() {
 
     window.scrollTo(0, 0);
 
-    const [qrFound, setFound] = useState(false)
+    const qrPanel = useRef()
 
-    const [qrOptions, setQrOptions] = useState(defaultQrOptions)
+    const qrOptions = useSelector(state => state.qrOptions.value)
+    const dispatch = useDispatch()
+
+    const [qrFound, setFound] = useState(qrOptions.data !== defaultQrOptions.data)
 
     const [qrCode] = useState(new QRCodeStyling(qrOptions))
 
     useEffect(() => {
-        qrCode.append(document.getElementById("qrPanel"))
+        qrCode.append(qrPanel.current)
     })
 
     useEffect(() => {
@@ -50,10 +55,7 @@ export default function Page2() {
 
     function notifyQrCodeFound(code) {
         alert.success("ho trovato qr");
-        setQrOptions({
-            ...qrOptions,
-            data : code
-        })
+        dispatch(changeData(code))
         setFound(true)
     }
 
@@ -106,10 +108,7 @@ export default function Page2() {
             </div>
             <div className="qrframe">
                 <div className="frame">
-                    {!qrFound ? <img src={qr}  className="qr" alt={"qr icon"}/> : null}
-                    <svg visibility={!qrFound ? "hidden" : "visible"} id={"qrPanel"} viewBox="0 0 1000 1000" style={{width: 200}}>
-                        <img src={qr}  className="qr" alt={"qr icon"}/>
-                    </svg>
+                    <svg ref={qrPanel} viewBox="0 0 1000 1000" style={{width: 200}}/>
                 </div>
             </div>
             <div className="panel2">
@@ -142,7 +141,7 @@ export default function Page2() {
                 </div>
                 <footer>
                     <div className="pagineOptions">
-                        <Link to={{pathname : '/page25' , state: {qrOptions}}} >
+                        <Link to={{pathname : '/page25' , state: {}}} >
                             <div className="buttonAvanti"  style={{display : !qrFound ? "none" : "block"}}>
                                 <img src={avanti} className="avanti" />
                             </div>

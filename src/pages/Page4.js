@@ -1,10 +1,13 @@
-import React from "react";
-import qr from '../immagini/Qr.png';
+import React, {useEffect, useRef, useState} from "react";
 import avanti from "../immagini/Avanti.svg";
 import image from "../immagini/Image.svg";
 import fasi from "../immagini/Group 8.svg";
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import './Pages.css';
+import QRCodeStyling from "qr-code-styling";
+import {useDispatch, useSelector} from "react-redux";
+import {changeLogo} from "../features/qrCode/qrCodeOptions";
+
 
 
 function Page4() {
@@ -14,17 +17,46 @@ function Page4() {
     root.style.setProperty('--green', "#FFFFFF");
 
     window.scrollTo(0, 0);
-    
-    return (
-        <>
 
+    const qrPanel = useRef()
+
+    const qrOptions = useSelector(state => state.qrOptions.value)
+    const dispatch = useDispatch()
+
+    const [qrCode] = useState(new QRCodeStyling(qrOptions))
+
+    useEffect(() => {
+        qrCode.append(qrPanel.current)
+    })
+
+    useEffect(() => {
+        qrCode.update(qrOptions)
+    },[qrCode, qrOptions])
+
+    const inputFile = useRef(null)
+
+    function onImageSelectorClick() {
+        inputFile.current.click();
+    }
+
+    function onImageInput(file) {
+        dispatch(changeLogo(URL.createObjectURL(file)))
+    }
+
+    function onImageRemoveClick() {
+        dispatch(changeLogo(""))
+    }
+
+
+    return (
+        <div>
             <div className="fase">
             <img src={fasi}  />
             </div>
 
             <div className="qrframe">
                 <div className="frame">
-                    <img src={qr}  className="qr"/>
+                    <svg ref={qrPanel} viewBox="0 0 1000 1000" style={{width: 200}}/>
                 </div>
             </div>
 
@@ -36,27 +68,28 @@ function Page4() {
                 </div>
 
                 <div className="loadOptions">
-                    <div className="loadlogo">
+                    <div className="loadlogo" onClick={onImageSelectorClick}>
                         <div>
                             <img src={image} className="logo" />
                         </div>
-                        <div className="loadLabel">
+                        <div className="loadLabel" >
                             Galleria
+                            <input type="file" ref={inputFile} accept="image/png, image/jpeg" onChange={ e => (onImageInput(e.target.files[0])) } style={{display: 'none'}}/>
                         </div>
                     </div>
-                    <div className="rimuovilogo">
+                    <div className="rimuovilogo" onClick={onImageRemoveClick}>
                         Rimuovi
                     </div>
                 </div>
                 <footer>
                 <div className="pagineOptions">
-                    <Link to="/page5">
+                    <Link to={{pathname : "/page5", state : {}}}>
                         <div className="buttonAvanti">
                             <img src={avanti} className="avanti" />
                         </div>
                     </Link>
                     
-                    <Link to ="/page3">
+                    <Link to={{pathname : "/page3", state : {}}}>
                         <div className="buttonIndietro">
                             <img src={avanti} className="indietro" />
                         </div>
@@ -64,7 +97,7 @@ function Page4() {
                 </div>
                 </footer>
             </div>
-        </>
+        </div>
     )
   }
   

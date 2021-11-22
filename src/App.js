@@ -14,13 +14,11 @@ function App() {
   };
   
   return (
-    <>
     <Provider template={AlertTemplate} {...options}>
       <BrowserRouter>
       <Main />
       </BrowserRouter>
     </Provider>
-    </>
   );
 }
 

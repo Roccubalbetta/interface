@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import qr from '../immagini/Qr.png';
 import avanti from "../immagini/Avanti.svg";
 import {Link, useLocation} from 'react-router-dom';
@@ -8,6 +8,7 @@ import './Pages.css';
 import { CirclePicker } from "react-color";
 import {defaultQrOptions} from "../utilities";
 import QRCodeStyling from "qr-code-styling";
+import {useDispatch, useSelector} from "react-redux";
 
 
 function Page3() {
@@ -18,22 +19,15 @@ function Page3() {
 
     window.scrollTo(0, 0);
 
-    let defaultOptions;
+    const qrPanel = useRef()
 
-    const location = useLocation()
-
-    if (location.state && location.state.qrOptions){
-        defaultOptions = location.state.qrOptions
-    } else {
-        defaultOptions = defaultQrOptions
-    }
-
-    const [qrOptions, setQrOptions] = useState(defaultOptions)
+    const qrOptions = useSelector(state => state.qrOptions.value)
+    const dispatch = useDispatch()
 
     const [qrCode] = useState(new QRCodeStyling(qrOptions))
 
     useEffect(() => {
-        qrCode.append(document.getElementById("qrPanel"))
+        qrCode.append(qrPanel.current)
     })
 
     useEffect(() => {
@@ -56,7 +50,7 @@ function Page3() {
 
             <div className="qrframe">
                 <div className="frame">
-                    <svg id={"qrPanel"} viewBox="0 0 1000 1000" style={{width: 200}}/>
+                    <svg ref={qrPanel} viewBox="0 0 1000 1000" style={{width: 200}}/>
                 </div>
             </div>
 
@@ -105,13 +99,13 @@ function Page3() {
 
                 <footer>
                 <div className="pagine3Options">
-                    <Link to="/page4">
+                    <Link to={{pathname : "/page4", state : {}}}>
                         <div className="buttonAvanti">
                             <img src={avanti} className="avanti" />
                         </div>
                     </Link>
                     
-                    <Link to ={{pathname : "/page25", state : {qrOptions}}}>
+                    <Link to ={{pathname : "/page25", state : {}}}>
                         <div className="buttonIndietro">
                             <img src={avanti} className="indietro" />
                         </div>

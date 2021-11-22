@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import avanti from "../immagini/Avanti.svg";
 import {Link, useLocation} from 'react-router-dom';
 import fasi from "../immagini/Group 6.svg";
@@ -8,6 +8,8 @@ import {CirclePicker} from "react-color";
 import QRCodeStyling from "qr-code-styling";
 import {Button, Col, Container, Row} from "react-bootstrap";
 import {defaultQrOptions} from "../utilities";
+import {useDispatch, useSelector} from "react-redux";
+import {changeCornersDotColor, changeCornerSquareColor, changeDotsColor} from "../features/qrCode/qrCodeOptions";
 
 function Page25() {
     let root = document.documentElement;
@@ -16,22 +18,15 @@ function Page25() {
 
     window.scrollTo(0, 0);
 
-    let defaultOptions;
+    const qrPanel = useRef()
 
-    const location = useLocation()
-
-    if (location.state && location.state.qrOptions){
-       defaultOptions = location.state.qrOptions
-    } else {
-        defaultOptions = defaultQrOptions
-    }
-
-    const [qrOptions, setQrOptions] = useState(defaultOptions)
+    const qrOptions = useSelector(state => state.qrOptions.value)
+    const dispatch = useDispatch()
 
     const [qrCode] = useState(new QRCodeStyling(qrOptions))
 
     useEffect(() => {
-        qrCode.append(document.getElementById("qrPanel"))
+        qrCode.append(qrPanel.current)
     })
 
     useEffect(() => {
@@ -39,133 +34,105 @@ function Page25() {
     },[qrCode, qrOptions])
 
     const color1Selected = (color, event) => {
-        setQrOptions({
-            ...qrOptions,
-            dotsOptions: {
-                ...qrOptions.dotsOptions,
-                color: color.hex
-            }
-        })
+        dispatch(changeDotsColor(color.hex))
     }
 
     const color2Selected = (color, event) => {
-        setQrOptions({
-            ...qrOptions,
-            cornersSquareOptions: {
-                ...qrOptions.cornersSquareOptions,
-                color: color.hex
-            }
-        })
+        dispatch(changeCornerSquareColor(color.hex))
     }
     const color3Selected = (color, event) => {
-        setQrOptions({
-            ...qrOptions,
-            cornersDotOptions: {
-                ...qrOptions.cornersDotOptions,
-                color: color.hex
-            }
-        })
+        dispatch(changeCornersDotColor(color.hex))
     }
 
     return (
-        <Container fluid>
-            <Row className={"my-3"}>
-                <Col className={"text-center"}>
-                    <img src={fasi}/>
-                </Col>
-            </Row>
+        <div>
+            <div className="fase">
+                <img src={fasi}  />
+            </div>
 
-            <Row className={"my-5"}>
-                <Col className={"text-center"}>
-                    <svg id={"qrPanel"} viewBox="0 0 1000 1000" style={{width: 200}}/>
-                </Col>
-            </Row>
+            <div className="qrframe">
+                <div className="frame">
+                    <svg ref={qrPanel} viewBox="0 0 1000 1000" style={{width: 200}}/>
+                </div>
+            </div>
 
-            <Row style={{background : "#F1FAEE"}} className={"py-3 text-start"}>
-                <Col>
-                    <Row className={"mb-3"}>
-                        <Col sm={5}/>
-                        <Col sm={2}>
-                            <h2>Scegli il colore :</h2>
-                        </Col>
-                        <Col sm={5}/>
-                    </Row>
-                    <Row className={"mb-3"}>
-                        <Col sm={5}/>
-                        <Col sm={2}>
-                            <h3 className={"mb-2"}>
-                                Quadrati negli angoli
-                            </h3>
-                            <CirclePicker
-                                className = {"w-100"}
-                                colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
-                                    "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
-                                circleSize={45}
-                                circleSpacing={35}
-                                onChangeComplete={color1Selected}
-                            />
-                        </Col>
-                        <Col sm={5}/>
-                    </Row>
-                    <Row className={"mb-3"}>
-                        <Col sm={5}/>
-                        <Col sm={2}>
-                            <h3 className={"mb-2"}>
-                                Quadrati interni
-                            </h3>
-                            <CirclePicker
-                                className = {"w-100"}
-                                colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
-                                    "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
-                                circleSize={45}
-                                circleSpacing={35}
-                                onChangeComplete={color2Selected}
-                            />
-                        </Col>
-                        <Col sm={5}/>
-                    </Row>
-                    <Row>
-                        <Col sm={5}/>
-                        <Col sm={2}>
-                            <h3>
-                                Quadrati grandi
-                            </h3>
-                            <CirclePicker
-                                className = {"w-100"}
-                                colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
-                                    "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
-                                circleSize={45}
-                                circleSpacing={35}
-                                onChangeComplete={color3Selected}
-                            />
-                        </Col>
-                        <Col sm={5}/>
-                    </Row>
+            <div className="panel3">
 
+                <div className="guideframe">
+                    <div className="guide">
+                        Scegli il colore
+                    </div>
+                </div>
 
-                </Col>
-            </Row>
-            <Row>
-                <Col sm={5}/>
-                <Col sm={2}>
-                    <Row>
-                        <Col className={"text-center"}>
-                            <Link to="/page2">
-                                <Button className={"m-3"}>
-                                    <img src={avanti}/>
-                                </Button>
-                            </Link>
-                            <Link to={{pathname : "/page3", state : {qrOptions}}}>
-                                <Button className={"m-3"}>
-                                    <img src={avanti}/>
-                                </Button>
-                            </Link>
-                        </Col>
-                    </Row>
-                </Col>
-                <Col sm={5}/>
-            </Row>
-        </Container>
+                <div className="colorframe">
+                    <div className="colore">
+                        Colore
+                    </div>
+
+                    <div className="colortable">
+                        <CirclePicker
+                            colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
+                                "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+                            circleSize={45}
+                            circleSpacing={35}
+                            width={{width: "100%"}}
+                            onChangeComplete={color1Selected}
+                        >
+                        </CirclePicker>
+                    </div>
+                </div>
+
+                <div className="gradientframe">
+                    <div className="colore">
+                        Gradiente
+                    </div>
+                    <div className="gradienttable">
+                        <CirclePicker
+                            colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
+                                "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+                            circleSize={45}
+                            circleSpacing={35}
+                            width={{width: "100%"}}
+                            onChangeComplete={color2Selected}
+                        >
+                        </CirclePicker>
+                    </div>
+                </div>
+
+                <div className="dotframe">
+                    <div className="colore">
+                        Gradiente
+                    </div>
+                    <div className="gradienttable">
+                        <CirclePicker
+                            colors={["#f44336", "#e91e63", "#9c27b0", "#673ab7",
+                                "#3f51b5", "#2196f3", "#03a9f4", "#00bcd4"]}
+                            circleSize={45}
+                            circleSpacing={35}
+                            width={{width: "100%"}}
+                            onChangeComplete={color3Selected}
+                        >
+                        </CirclePicker>
+                    </div>
+                </div>
+
+                <footer>
+                    <div className="pagine2Options">
+                        <Link to={{pathname : "/page4", state : {}}}>
+                            <div className="buttonAvanti">
+                                <img src={avanti} className="avanti" />
+                            </div>
+                        </Link>
+
+                        <Link to ={{pathname : "/page4", state : {}}}>
+                            <div className="buttonIndietro">
+                                <img src={avanti} className="indietro" />
+                            </div>
+                        </Link>
+                    </div>
+                </footer>
+            </div>
+        </div>
     )
 }
 

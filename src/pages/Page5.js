@@ -1,11 +1,14 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import qr from '../immagini/Qr.png';
 import avanti from "../immagini/Avanti.svg";
 import fasi from "../immagini/Group 9.svg";
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import './Pages.css';
 
 import { CirclePicker } from "react-color";
+import {defaultQrOptions} from "../utilities";
+import QRCodeStyling from "qr-code-styling";
+import {useDispatch, useSelector} from "react-redux";
 
 
 function Page5() {
@@ -16,6 +19,23 @@ function Page5() {
 
     window.scrollTo(0, 0);
 
+    const qrPanel = useRef()
+
+    const qrOptions = useSelector(state => state.qrOptions.value)
+    const dispatch = useDispatch()
+
+    const [qrFound, setFound] = useState(qrOptions.data !== defaultQrOptions.data)
+
+    const [qrCode] = useState(new QRCodeStyling(qrOptions))
+
+    useEffect(() => {
+        qrCode.append(qrPanel.current)
+    })
+
+    useEffect(() => {
+        qrCode.update(qrOptions)
+    },[qrCode, qrOptions])
+
     return (
         <>
            <div className="fase">
@@ -24,7 +44,7 @@ function Page5() {
 
             <div className="qrframe">
                 <div className="frame">
-                    <img src={qr}  className="qr"/>
+                    <svg ref={qrPanel} viewBox="0 0 1000 1000" style={{width: 200}}/>
                 </div>
             </div>
 
@@ -87,13 +107,13 @@ function Page5() {
                 </div>
 
                 <div className="pagine5Options">
-                    <Link to="/page6">
+                    <Link to={{pathname : "/page6", state : {}}}>
                         <div className="buttonAvanti">
                             <img src={avanti} className="avanti" />
                         </div>
                     </Link>
                     
-                    <Link to ="/page4">
+                    <Link to={{pathname : "/page4", state : {}}}>
                         <div className="buttonIndietro">
                             <img src={avanti} className="indietro" />
                         </div>

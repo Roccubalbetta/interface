@@ -1,12 +1,15 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import qr from '../immagini/Qr.png';
 import share from '../immagini/Share.svg';
 import image from "../immagini/Image.svg";
 import avanti from "../immagini/Avanti.svg";
 import fasi from "../immagini/Group 10.svg";
-import {Link} from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 import './Pages.css';
-import "@fontsource/nanum-pen-script"; // Defaults to weight 400.
+import "@fontsource/nanum-pen-script";
+import {defaultQrOptions} from "../utilities";
+import QRCodeStyling from "qr-code-styling";
+import {useDispatch, useSelector} from "react-redux"; // Defaults to weight 400.
 
 
 function Page6() {
@@ -16,6 +19,27 @@ function Page6() {
     root.style.setProperty('--green', "#FFFFFF");
 
     window.scrollTo(0, 0);
+
+    const qrPanel = useRef()
+
+    const qrOptions = useSelector(state => state.qrOptions.value)
+    const dispatch = useDispatch()
+
+    const [qrFound, setFound] = useState(qrOptions.data !== defaultQrOptions.data)
+
+    const [qrCode] = useState(new QRCodeStyling(qrOptions))
+
+    useEffect(() => {
+        qrCode.append(qrPanel.current)
+    })
+
+    useEffect(() => {
+        qrCode.update(qrOptions)
+    },[qrCode, qrOptions])
+
+    const onDownloadClicked = () => {
+        qrCode.download({extension : "jpeg"})
+    }
     
     return (
         <>
@@ -25,7 +49,7 @@ function Page6() {
 
             <div className="qrframe">
                 <div className="frame">
-                    <img src={qr}  className="qr"/>
+                    <svg ref={qrPanel} viewBox="0 0 1000 1000" style={{width: 200}}/>
                 </div>
             </div>
             <div className="panel">
@@ -45,7 +69,7 @@ function Page6() {
                         </div>
                     </div>
                     <div className="loaddx">
-                        <div>
+                        <div onClick={onDownloadClicked}>
                             <img src={image} className="icon" />
                         </div>
                         <div className="loadLabel">
@@ -65,7 +89,7 @@ function Page6() {
                         </div>
                     </Link>
                     
-                    <Link to ="/page1">
+                    <Link to={{pathname : "/page5", state : {}}}>
                         <div className="buttonIndietro">
                             <img src={avanti} className="indietro" />
                         </div>
